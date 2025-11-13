@@ -23,11 +23,7 @@ const NavbarSection = () => {
 const Logo = () => {
   return (
     <Navbar.Brand href="#home" className="logo__img-container">
-      <img
-        src="/images/logos/help4landlordslogo.webp"
-        alt="Logo"
-        className="logo__img"
-      />
+      <img src="/images/logos/Logo2.webp" alt="Logo" className="logo__img" />
     </Navbar.Brand>
   );
 };
