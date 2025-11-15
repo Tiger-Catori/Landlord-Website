@@ -44,7 +44,7 @@ export default FeaturedComponent;
 
 const FeaturedSection = () => {
   return (
-    <div className="featured__section">
+    <div className="featured__section" id="how-it-works">
       <h2 className="featured__text__title" id="featured-title">
         Quick wins, rewarding outcomes
       </h2>

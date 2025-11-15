@@ -30,7 +30,7 @@ const HeroText = () => {
         investments?
       </p>
       <div className="hero__btn hero__btn-link">
-        <a href="help4propertydeals@gmx.com">Speak to our Team</a>
+        <a href="mailto:help4propertydeals@gmx.com">Speak to our Team</a>
       </div>
     </div>
   );

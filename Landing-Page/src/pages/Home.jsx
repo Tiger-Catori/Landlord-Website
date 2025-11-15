@@ -3,6 +3,7 @@ import NavbarComponment from "../components/Navbar";
 import HeroComponent from "../components/Hero";
 import BannerComponent from "../components/Banner";
 import FeaturedSection from "../components/Featured";
+import FooterComponent from "../components/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HeroComponent />
       <BannerComponent />
       <FeaturedSection />
+      <FooterComponent />
     </>
   );
 };

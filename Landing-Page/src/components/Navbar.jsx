@@ -41,7 +41,7 @@ const NavbarSection = () => {
 // Logo Component
 const Logo = () => {
   return (
-    <Navbar.Brand href="#home" className="logo__img-container">
+    <Navbar.Brand href="#" className="logo__img-container">
       <img
         src="/images/logos/Logo2.webp"
         // src="/images/logos/Logo-icon.webp"
@@ -62,7 +62,7 @@ const NavLinks = () => {
       <Nav.Link className="nav__link" href="#About us">
         <span>About us</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#How-it-works">
+      <Nav.Link className="nav__link" href="#how-it-works">
         <span>How it works</span>
       </Nav.Link>
       <Nav.Link className="nav__link" href="#Contact-us">
