@@ -131,48 +131,50 @@
     align-items: center;
     position: relative; /* Needed so arrow stays aligned to each link */
 }
-
 /* Arrow for Site Map links */
 .site-map li a::before {
     content: "→";
     position: absolute;
-    left: -3rem; /* arrow sits just left of text */
+    left: -3rem;
+    top: 50%; /* center vertically */
+    transform: translateY(-60%); /* perfect alignment */
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--clr-accent2);
     font-size: 2rem;
-    font-weight: var(--fw-bold);
+    font-weight: 700;
 }
 
 .site-map li a:hover::before {
     opacity: 1;
-    left: -3rem; /* same position */
-    bottom: 2px;
+    left: -3rem;
+    transform: translateY(-60%); /* stays centered on hover */
 }
 
-/* Arrow for Social Media links — SAME behaviour as sitemap */
+/* Arrow for Social Media links — same alignment */
 .social-links li a::before {
     content: "→";
     position: absolute;
-    left: -3rem; /* arrow sits just left of icon/text */
+    left: -3rem;
+    top: 50%; /* center vertically */
+    transform: translateY(-60%);
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--clr-accent2);
     font-size: 2rem;
-    font-weight: var(--fw-bold);
+    font-weight: 700;
 }
 
 .social-links li a:hover::before {
     opacity: 1;
-    left: -3rem; /* same hover position */
-    bottom: 1px;
+    left: -3rem;
+    transform: translateY(-60%);
 }
 
 /* Hover effects */
 .site-map li a:hover,
 .social-links li a:hover {
     color: var(--clr-accent2);
-    transform: none;
     padding-left: 0;
 }
 
