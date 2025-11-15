@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    max-width: 150rem;
+    max-width: 130rem;
 }
 
 /* Text above the cards */
@@ -50,7 +50,7 @@
     margin: 3.6rem 0;
     padding: 4.8rem; /* card padding */
     background-color: var(--clr-accent5);
-    gap: 2rem; /* space between image and text */
+    gap: 6rem; /* space between image and text */
     border-radius: 30px;
     color: var(--clr-body2);
 }

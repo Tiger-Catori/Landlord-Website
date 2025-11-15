@@ -1,64 +1,90 @@
 /* Navbar styling */
 .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
     display: flex;
-    align-items: center; /* keep items vertically centered */
-    justify-content: center; /* align container start (leftmost) */
+    align-items: center;
+    justify-content: center;
     background-color: var(--clr-accent5);
-    /*opacity: 0.92;*/
+    opacity: 0.9;
     opacity: 1;
     font-family: var(--ff-primary);
     padding: 1rem 1rem;
     transition:
         background-color 0.3s,
         opacity 0.3s;
-    /* Removed space-around to allow left alignment */
+    border-bottom: 1px solid var(--clr-accent5);
 }
 
-.nav__bar {
-    align-items: center;
+/* Sticky state after scrolling */
+.navbar--sticky {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(2px);
+    background-color: #111;
+    opacity: 0.87;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeDown 0.3s ease-out;
 }
 
-.navbar .logo__img {
-    max-width: 15rem; /* increase logo size (e.g., ~160px max width) */
-    width: auto; /* let image width auto-scale with max-width */
-    height: auto;
-    border-radius: 6px;
-    /* Remove vertical centering hacks: */
-    /*margin-top: 0;*/
-    transform: none;
+/* Small animation when sticking */
+@keyframes fadeDown {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
+/* Logo container */
 .logo__img-container {
     display: flex;
 }
 
-.nav__links {
-    display: flex;
-    justify-content: space-around; /* evenly distribute links within this container */
-    flex: 1; /* allow this container to grow and fill space */
-    list-style: none; /* (if not already reset) */
-    padding: 0;
-    margin: 0; /* remove default ul spacing if applicable */
-    align-items: center;
-    max-width: 80rem;
-    /* Note: If .nav__links is a <Nav> component wrapper, ensure it spans full width */
+/* Logo image */
+.navbar .logo__img {
+    max-width: 15rem;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
 }
 
-.nav__link {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-semibold);
-    text-decoration: none;
-    color: var(--clr-accent4);
-    /* (no change to hover, etc.) */
-}
-.nav__link:hover {
-    color: var(--clr-accent2);
-}
-
+/* Outer nav container */
 .nav__section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     max-width: 150rem;
+}
+
+/* Links container */
+.nav__links {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    max-width: 80rem;
+}
+
+/* Individual link */
+.nav__link {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    color: var(--clr-accent4);
+}
+
+.nav__link:hover {
+    color: var(--clr-accent2);
 }

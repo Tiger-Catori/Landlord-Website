@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
@@ -9,8 +9,27 @@ const NavbarComponent = () => {
 export default NavbarComponent;
 
 const NavbarSection = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // When user scrolls 50px, activate sticky mode
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Navbar expand="lg" sticky="top" className="navbar navbar-dark .nav__bar">
+    <Navbar
+      expand="lg"
+      className={`navbar navbar-dark nav__bar ${isSticky ? "navbar--sticky" : ""}`}
+    >
       <Container className="nav__section">
         <Logo />
         <NavLinks />
@@ -23,7 +42,12 @@ const NavbarSection = () => {
 const Logo = () => {
   return (
     <Navbar.Brand href="#home" className="logo__img-container">
-      <img src="/images/logos/Logo2.webp" alt="Logo" className="logo__img" />
+      <img
+        src="/images/logos/Logo2.webp"
+        // src="/images/logos/Logo-icon.webp"
+        alt="Logo"
+        className="logo__img"
+      />
     </Navbar.Brand>
   );
 };
