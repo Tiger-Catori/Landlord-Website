@@ -190,7 +190,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 8.6rem;
-    color: var(--clr-headings2);
+    color: var(--clr-accent4);
     border-top: 1px solid var(--clr-accent4);
     padding-top: 3.2rem;
     z-index: 1;
@@ -198,7 +198,7 @@
 }
 
 .footer__bottom a {
-    color: var(--clr-headings2);
+    color: var(--clr-accent4);
     text-decoration: none;
 }
 
