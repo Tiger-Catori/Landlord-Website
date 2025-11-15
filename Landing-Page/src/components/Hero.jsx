@@ -26,11 +26,11 @@ const HeroText = () => {
         Manage <span>Less,</span> Earn <span>More</span>
       </h2>
       <p className="hero__p">
-        Are you are looking for a passive, stress-free approach to your property
-        investment
+        Looking for a passive, stress-free solution for your property
+        investments?
       </p>
       <div className="hero__btn hero__btn-link">
-        <a href="help4propertydeals@gmx.com">Speak to the Team</a>
+        <a href="help4propertydeals@gmx.com">Speak to our Team</a>
       </div>
     </div>
   );

@@ -6,32 +6,33 @@ const cardData = [
     id: 1,
     images: [{ id: 1, img: "featured-image-1.webp", alt: "Image 1A" }],
     text: {
-      text_h2: "We offer guaranteed rental income",
+      text_h2: "Guaranteed Rental Income",
       text_p1:
-        "We look to let properties long-term, typically for 3-5 years, giving landlords security over their property investment while ensuring no void periods. During that time, we take care of everything, providing you with a completely hands-off investment.",
+        "As a landlord, you benefit from a guaranteed rental income. We secure long-term tenants (typically 3-5 year leases) to eliminate void periods and deliver consistent returns. During this time, we manage every aspect of the tenancy, providing you with a completely hands-off experience.",
       text_p2:
-        "Your property will be professionally managed and occupied by high-quality professional tenants, with weekly professional cleaning to keep it in the best possible condition.",
+        "Your property is professionally managed by our experienced team and occupied by high-quality professionals. Professional cleaning ensures it remains in great condition, protecting your investment.",
     },
   },
   {
     id: 2,
     images: [{ id: 1, img: "featured-image-2.webp", alt: "Image 2A" }],
     text: {
-      text_h2: "We complete free cosmetic refurbs",
+      text_h2: "Complimentary Cosmetic Upgrades",
       text_p1:
-        "Our power team will carry out a free cosmetic upgrade and fully furnish your property to attract high-end professional tenants.",
+        "Our dedicated team performs complimentary cosmetic upgrades and fully furnishes and stages the property to enhance its appeal to discerning professional tenants.",
       text_p2:
-        "This means you benefit from added value to your property, which is maintained through weekly professional cleaning—giving you peace of mind that your property will be returned to you in great condition.",
+        "This adds value to your property, and our regular professional cleaning ensures it will be returned to you in excellent condition, giving you peace of mind.",
     },
   },
   {
     id: 3,
     images: [{ id: 1, img: "featured-image-3.webp", alt: "Image 3A" }],
     text: {
-      text_h2: "We provide purchase options",
+      text_h2: "Flexible Ownership Options",
       text_p1:
-        "At the end of our agreement, we offer several options, including the possibility for Rent4U to purchase your property if it aligns with your long-term goals.",
-      text_p2: "No fees, no agents, and no hassle!",
+        "At the conclusion of our agreement, you will have multiple options. You can renew, or if it suits your long-term goals, Help4Landlords can even purchase your property directly, ensuring a smooth, hassle-free transaction with no estate agent fees.",
+      text_p2:
+        "This straightforward process involves no additional fees or unnecessary complications.",
     },
   },
 ];
@@ -45,13 +46,13 @@ const FeaturedSection = () => {
   return (
     <div className="featured__section">
       <h2 className="featured__text__title" id="featured-title">
-        Minimal effort, maximum reward
+        Quick wins, rewarding outcomes
       </h2>
       <p className="featured__text__description" id="featured__p">
-        Help4Landlords offers landlords an unparalleled service, far exceeding
-        traditional letting. Our comprehensive, modern solution tackles the
-        challenges landlords encounter, ensuring their properties are impeccably
-        maintained while generating a truly passive income.
+        Help4Landlords delivers a level of service that goes beyond traditional
+        letting. Our modern, all-in-one solution removes the usual burdens
+        landlords face—ensuring properties are expertly cared for while
+        providing a genuinely hands-off, passive income.
       </p>
       <div className="featured__cards-wrapper">
         {cardData.map((card) => (
