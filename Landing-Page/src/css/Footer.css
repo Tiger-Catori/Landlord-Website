@@ -110,7 +110,7 @@
 /* Link styles */
 .footer-col ul li a {
     font-size: 1.6rem;
-    color: var(--clr-body2);
+    color: var(--clr-accent4);
     text-decoration: none;
     display: block;
     position: relative;
