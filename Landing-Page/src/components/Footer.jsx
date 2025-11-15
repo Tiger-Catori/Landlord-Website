@@ -28,84 +28,70 @@ const FooterLogo = () => {
   return (
     <div className="footer-col logo-footer">
       <img src="/images/logos/Logo-icon.webp" alt="Help4Landlords Logo" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Leo lectus posuere tellus auctor
-        non ac in. Tristique feugiat senectus ultrices m
-      </p>
+      <p>Lorem ipsum dolor sit amet consectetur. Leo lectus petegs</p>
     </div>
   );
 };
 
 const FooterLinks = () => {
+  const sitemapLinks = [
+    { name: "Home", url: "#" },
+    { name: "About me", url: "#hero" },
+    { name: "How it works", url: "#how-it-works" },
+    { name: "Contact us", url: "mailto:help4propertydeals@gmx.com" },
+  ];
+
   return (
     <div className="footer-col col-one">
       <h4>Sitemap</h4>
       <ul className="footer-links site-map">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#hero">About me</a>
-        </li>
-        <li>
-          <a href="#how-it-works">How it works</a>
-        </li>
-        <li>
-          <a href="mailto:help4propertydeals@gmx.com" class="footer-link">
-            Contact us
-          </a>
-        </li>
+        {sitemapLinks.map((link) => (
+          <li key={link.name}>
+            <a href={link.url}>{link.name}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
 
 const FooterSocialLinks = () => {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: "logo-facebook",
+      url: "https://www.facebook.com",
+    },
+    {
+      name: "Instagram",
+      icon: "logo-instagram",
+      url: "https://www.instagram.com",
+    },
+    {
+      name: "Twitter",
+      icon: "logo-twitter",
+      url: "https://www.twitter.com",
+    },
+    {
+      name: "Telegram",
+      icon: "navigate-circle-outline",
+      url: "https://web.telegram.org/a/",
+    },
+  ];
+
   return (
     <div className="footer-col col-two">
       <h4>Follow me</h4>
       <ul className="footer-links social-links">
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://www.facebook.com">
-            <ion-icon name="logo-facebook"></ion-icon>Facebook
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://www.instagram.com">
-            <ion-icon name="logo-instagram"></ion-icon>Instagram
-          </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://www.twitter.com">
-            <ion-icon name="logo-twitter"></ion-icon>Twitter
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://web.telegram.org/a/"
-          >
-            <ion-icon name="navigate-circle-outline"></ion-icon>Telegram
-          </a>
-        </li>
+        {socialLinks.map((link) => (
+          <li key={link.name}>
+            <a target="_blank" rel="noreferrer" href={link.url}>
+              <ion-icon name={link.icon}></ion-icon>
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
-    </div>
-  );
-};
-
-const FooterAppLinks = () => {
-  return (
-    <div className="footer-col col-three">
-      <h4>DOWNLOAD THE APP</h4>
-      <div className="app-buttons">
-        <a href="#google-play">
-          <img src="/images/general/googleplay.webp" alt="Google Play" />
-        </a>
-        <a href="#app-store">
-          <img src="/images/general/appstore.webp" alt="App Store" />
-        </a>
-      </div>
     </div>
   );
 };
@@ -121,10 +107,10 @@ const FooterBottom = () => {
   return (
     <div className="footer__bottom">
       <p>
-        &copy; <span id="current-year"></span> Michael Adeleye. All rights
+        &copy; <span id="current-year"></span> Help4Landlords. All rights
         reserved.
       </p>
-      {/* <p><a href="https://webmagnetism.com/">Powered by WebMagnetism.com</a></p> */}
+
       <p>
         <a href="#">Terms & Conditions</a>
       </p>

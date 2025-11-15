@@ -52,7 +52,7 @@
     background-color: var(--clr-accent5);
     gap: 6rem; /* space between image and text */
     border-radius: 30px;
-    color: var(--clr-body2);
+    color: var(--clr-accent4);
 }
 
 /* even cards → image LEFT, text RIGHT */
