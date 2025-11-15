@@ -6,7 +6,7 @@
     color: var(--clr-accent4);
     text-decoration: none;
     position: relative;
-    opacity: 0.87;
+    opacity: 0.95;
     font-family: var(--ff-primary);
     font-weight: var(--fw-semibold);
 }

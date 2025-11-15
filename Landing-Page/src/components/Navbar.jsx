@@ -59,13 +59,13 @@ const NavLinks = () => {
       <Nav.Link className="nav__link" href="#">
         <span>Home</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#About us">
+      <Nav.Link className="nav__link" href="#">
         <span>About us</span>
       </Nav.Link>
       <Nav.Link className="nav__link" href="#how-it-works">
         <span>How it works</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#Contact-us">
+      <Nav.Link className="nav__link" href="#">
         <span>Contact us</span>
       </Nav.Link>
     </Nav>
