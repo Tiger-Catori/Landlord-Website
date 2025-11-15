@@ -78,7 +78,7 @@
     font-size: calc(1rem + 0.6vw); /* responsive font size */
     line-height: 1.7;
     margin-bottom: 2.5rem;
-    color: #e2e8f0;
+    color: var(--clr-accent4);
 }
 
 /* Hero button (responsive) */
