@@ -4,7 +4,8 @@
     align-items: center; /* keep items vertically centered */
     justify-content: center; /* align container start (leftmost) */
     background-color: var(--clr-accent5);
-    opacity: 0.92;
+    /*opacity: 0.92;*/
+    opacity: 1;
     font-family: var(--ff-primary);
     padding: 1rem 1rem;
     transition:

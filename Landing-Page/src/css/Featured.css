@@ -1,0 +1,139 @@
+/* ================================
+   FEATURED SECTION STYLES
+   ================================ */
+
+/* Featured section wrapper */
+.featured__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 150rem;
+}
+
+/* Text above the cards */
+#featured-title,
+#featured__p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Main section heading (responsive) */
+#featured-title {
+    font-size: calc(2rem + 1vw); /* responsive size */
+    font-weight: var(--fw-semibold);
+    margin-top: 6.4rem;
+}
+
+/* Main intro paragraph (responsive) */
+#featured__p {
+    font-size: calc(1rem + 0.4vw); /* responsive size */
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--clr-body); /* adjust if needed */
+}
+
+/* Cards container */
+.featured .featured__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Individual card */
+.featured__card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3.6rem 0;
+    padding: 4.8rem; /* card padding */
+    background-color: var(--clr-accent5);
+    gap: 2rem; /* space between image and text */
+    border-radius: 30px;
+    color: var(--clr-body2);
+}
+
+/* even cards → image LEFT, text RIGHT */
+.featured__card:nth-child(even) {
+    flex-direction: row;
+}
+
+/* odd cards → image RIGHT, text LEFT */
+.featured__card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+/* Shared layout for image + text columns */
+.featured__image,
+.featured__text {
+    flex: 1;
+}
+
+/* Image wrapper */
+.featured__image {
+    display: flex;
+}
+
+/* Image styling */
+.featured__image img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* Text column */
+.featured__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card titles (inside each card, responsive) */
+.featured__text__title {
+    font-size: calc(
+        1.6rem + 0.6vw
+    ); /* slightly smaller than main section title */
+    font-weight: var(--fw-semibold);
+    margin-bottom: 1.2rem;
+}
+
+/* Card body text (responsive) */
+.featured__text__description {
+    font-size: calc(1rem + 0.3vw); /* responsive size */
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Responsive Layout (Image Above Text) ---------- */
+@media (max-width: 900px) {
+    .featured__card {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 3.2rem;
+    }
+
+    .featured__image,
+    .featured__text {
+        flex: unset;
+        width: 100%;
+    }
+
+    .featured__image {
+        justify-content: center;
+    }
+
+    .featured__image img {
+        width: 100%;
+        max-width: 50rem; /* prevents overly huge images on mobile */
+    }
+
+    .featured__text {
+        align-items: center; /* centers the text block */
+        text-align: center; /* centers text itself */
+    }
+}
