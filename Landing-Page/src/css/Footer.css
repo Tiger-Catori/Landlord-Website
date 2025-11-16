@@ -131,44 +131,41 @@
     align-items: center;
     position: relative; /* Needed so arrow stays aligned to each link */
 }
-/* Arrow for Site Map links */
-.site-map li a::before {
-    content: "→";
-    position: absolute;
-    left: -3rem;
-    top: 50%; /* center vertically */
-    transform: translateY(-52%); /* perfect alignment */
-    opacity: 0;
-    transition: all 0.3s ease;
-    color: var(--clr-accent2);
-    font-size: 2rem;
-    font-weight: 700;
-}
 
-.site-map li a:hover::before {
-    opacity: 1;
-    left: -3rem;
-    transform: translateY(-52%); /* stays centered on hover */
-}
-
-/* Arrow for Social Media links — same alignment */
+/* Default for Chromium-based browsers */
+/* Sitemap and social links */
+.site-map li a::before,
 .social-links li a::before {
     content: "→";
     position: absolute;
     left: -3rem;
-    top: 50%; /* center vertically */
-    transform: translateY(-52%);
+    top: 50%;
+    transform: translateY(-60%);
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--clr-accent2);
     font-size: 2rem;
-    font-weight: 700;
+    /*font-weight: 500;*/
 }
 
+.site-map li a:hover::before,
 .social-links li a:hover::before {
     opacity: 1;
     left: -3rem;
-    transform: translateY(-52%);
+    transform: translateY(-60%);
+}
+
+/* Firefox-specific CSS */
+@-moz-document url-prefix() {
+    .site-map li a::before,
+    .social-links li a::before {
+        transform: translateY(-52%) !important;
+    }
+
+    .site-map li a:hover::before,
+    .social-links li a:hover::before {
+        transform: translateY(-52%) !important;
+    }
 }
 
 /* Hover effects */
