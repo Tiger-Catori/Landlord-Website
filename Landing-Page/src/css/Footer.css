@@ -137,7 +137,7 @@
     position: absolute;
     left: -3rem;
     top: 50%; /* center vertically */
-    transform: translateY(-60%); /* perfect alignment */
+    transform: translateY(-52%); /* perfect alignment */
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--clr-accent2);
@@ -148,7 +148,7 @@
 .site-map li a:hover::before {
     opacity: 1;
     left: -3rem;
-    transform: translateY(-60%); /* stays centered on hover */
+    transform: translateY(-52%); /* stays centered on hover */
 }
 
 /* Arrow for Social Media links — same alignment */
@@ -157,7 +157,7 @@
     position: absolute;
     left: -3rem;
     top: 50%; /* center vertically */
-    transform: translateY(-60%);
+    transform: translateY(-52%);
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--clr-accent2);
@@ -168,7 +168,7 @@
 .social-links li a:hover::before {
     opacity: 1;
     left: -3rem;
-    transform: translateY(-60%);
+    transform: translateY(-52%);
 }
 
 /* Hover effects */
