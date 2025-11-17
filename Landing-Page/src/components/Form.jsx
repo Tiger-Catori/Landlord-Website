@@ -103,7 +103,7 @@ const FormInputs = () => (
       className="textarea"
       placeholder="Message..."
       autoComplete="off"
-    ></textarea>
+    />
   </>
 );
 

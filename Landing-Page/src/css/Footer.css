@@ -152,7 +152,7 @@
 .social-links li a:hover::before {
     opacity: 1;
     left: -3rem;
-    transform: translateY(-60%);
+    transform: translateY(-63%);
 }
 
 /* Firefox-specific CSS */
@@ -173,6 +173,7 @@
 .social-links li a:hover {
     color: var(--clr-accent2);
     padding-left: 0;
+    filter: brightness(1.3);
 }
 
 /* Icon hover zoom */

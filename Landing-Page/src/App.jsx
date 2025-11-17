@@ -14,17 +14,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className="container__body">
-//       <main className="main__content">
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//         </Routes>
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default App;
