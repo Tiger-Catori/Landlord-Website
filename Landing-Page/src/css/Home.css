@@ -7,3 +7,8 @@
     overflow-x: none;
     background-color: var(--clr-accent4);
 }
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+}

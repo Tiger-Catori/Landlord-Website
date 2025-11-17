@@ -1,0 +1,232 @@
+/* =========================================================
+   LAYOUT CONTAINERS
+   ========================================================= */
+.form__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 6.4rem;
+    max-width: 130rem; /* NEW */
+    width: 100%;
+    margin: 4rem auto; /* Center the container */
+}
+
+/* 50/50 split */
+.form__container > * {
+    flex: 1 1 50%; /* 50% width but responsive */
+    max-width: 50%;
+}
+
+/* Image container */
+.container__image {
+    width: 100%;
+    max-width: 100%; /* so it follows the 50% rule */
+}
+.container__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* =========================================================
+   FORM SECTION WRAPPER
+   ========================================================= */
+.form__section {
+    width: 100%;
+    padding: 3.2rem 4.8rem;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   FORM BASE STYLES
+   ========================================================= */
+.web__form {
+    width: 100%;
+}
+.web__form h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+.web__form p {
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.input__box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* =========================================================
+   INPUTS & TEXTAREAS
+   ========================================================= */
+.input,
+.textarea {
+    padding: 1.2rem 1.6rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--fs-btn);
+    background-color: #fff;
+    font-family: var(--ff-primary);
+}
+textarea {
+    resize: vertical;
+}
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.6rem;
+    font-size: var(--fs-btn);
+}
+.checkbox-container span a {
+    color: var(--clr-accent2);
+    text-decoration: none;
+}
+.checkbox-container span a:hover {
+    text-decoration: underline;
+}
+.label {
+    display: flex;
+    align-items: end;
+    margin-left: 3%;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+.btn__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.6rem;
+    padding: 1rem 1.5rem;
+    gap: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--clr-accent2);
+    color: var(--clr-body2);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-btn);
+    cursor: pointer;
+    filter: brightness(0.93);
+    letter-spacing: 0.05em;
+    font-family: var(--ff-primary);
+}
+.btn__form:hover {
+    filter: brightness(1);
+}
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.select-menu {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: var(--fs-btn);
+    font-weight: var(--fw-reg);
+    cursor: pointer;
+}
+.select-menu:hover {
+    background-color: #f2f2f2;
+}
+
+.select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.options {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.option {
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+}
+.option:hover {
+    background-color: #f2f2f2;
+}
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
+/* Center the entire HOW IT WORKS section inside the form */
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* NEW: center content horizontally */
+    justify-content: center;
+    margin-top: 2.4rem;
+    text-align: center;
+    width: 100%; /* Ensures clean alignment */
+}
+
+.how-it-works h1 {
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-h2);
+    margin-bottom: 1.4rem;
+}
+
+/* Steps wrapper centered */
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Fix image centering */
+.steps img {
+    max-width: 50rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* FIXED: centers the image */
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1200px) {
+    .form__container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .form__container > * {
+        max-width: 100%;
+    }
+}

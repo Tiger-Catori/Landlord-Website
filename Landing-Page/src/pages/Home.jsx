@@ -4,14 +4,16 @@ import HeroComponent from "../components/Hero";
 import BannerComponent from "../components/Banner";
 import FeaturedSection from "../components/Featured";
 import FooterComponent from "../components/Footer";
+import FormComponent from "../components/Form";
 
 const Home = () => {
   return (
     <>
       <NavbarComponment />
       <HeroComponent />
-      <BannerComponent />
+      {/* <BannerComponent />*/}
       <FeaturedSection />
+      <FormComponent />
       <FooterComponent />
     </>
   );
