@@ -7,9 +7,28 @@ export default BannerComponent;
 
 const Banner = () => {
   // Banner Item Data with image and filenames.
+  // const bannerItems = [
+  //   { id: 1, img: "prs-logo.webp", alt: "Property Redress Scheme" },
+  //   { id: 2, img: "nhs-logo.webp", alt: "National Health Service" },
+  //   { id: 3, img: "ico-logo.webp", alt: "Information Commissioner's Office" },
+  //   { id: 4, img: "property-ombudsman-logo.webp", alt: "Property Ombudsman" },
+  //   {
+  //     id: 5,
+  //     img: "nrla-logo.webp",
+  //     alt: "National Residential Landlords Association",
+  //   },
+  // ];
+
   const bannerItems = [
-    { id: 1, img: "excel-logo.webp", alt: "London Excel Arena" },
-    { id: 2, img: "nhs-logo.webp", alt: "NHS" },
+    { id: 1, img: "prs-logo.svg", alt: "Property Redress Scheme" },
+    { id: 2, img: "nhs-logo.svg", alt: "National Health Service" },
+    { id: 3, img: "ico-logo.svg", alt: "Information Commissioner's Office" },
+    { id: 4, img: "property-ombudsman-logo.svg", alt: "Property Ombudsman" },
+    {
+      id: 5,
+      img: "nrla-logo.svg",
+      alt: "National Residential Landlords Association",
+    },
   ];
   return (
     <section className="section__banner">
@@ -26,7 +45,8 @@ const BannerItem = ({ bannerItems }) => {
       {bannerItems.map((item) => (
         <img
           key={item.id}
-          src={`/images/banner/${item.img}`}
+          // src={`/images/banner/webp/${item.img}`}
+          src={`/images/banner/svg/${item.img}`}
           alt={item.alt}
           className="banner__img"
         />

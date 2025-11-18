@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <NavbarComponment />
       <HeroComponent />
-      {/* <BannerComponent />*/}
+      <BannerComponent />
       <FeaturedSection />
       <FormComponent />
       <FooterComponent />

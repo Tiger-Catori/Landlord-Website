@@ -1,9 +1,7 @@
 /* Section and Banner styling */
 .section__banner {
-    padding: 2rem 0;
-    /*background-color: #ffcc9f;*/
-    /*background-color: var(--clr-hover2);*/
-    background-color: #fff;
+    padding: 0; /* Reduced vertical padding to make the banner shorter */
+    background-color: #ccc;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +11,8 @@
     flex-direction: column;
     opacity: 0.8;
     width: 100%;
-    border-bottom: 3px solid var(--clr-accent5);
+    filter: brightness(1.2);
+    border-bottom: 6px solid var(--clr-accent2);
 }
 
 /* Banner container and items */
@@ -21,31 +20,42 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
     justify-content: center;
 }
 
 .banner__items {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-between;*/
+    justify-content: space-evenly;
+    align-items: center; /* Ensure vertical alignment */
     width: 100%;
     max-width: 130rem;
-    padding: 0 20px;
+    padding: 0;
 }
 
 /* Banner image styling */
 .banner__img {
-    filter: grayscale(100%); /* Ensure this filter is applied */
-    height: 9rem;
-    width: auto;
-    max-height: 7rem; /* Ensure images don't get stretched */
-    transition: filter 0.3s ease; /* Add transition for smooth hover effect */
+    height: auto; /* Keep the images at their original aspect ratio */
+    width: 16rem; /* Keep the fixed uniform width */
+    object-fit: contain; /* Ensures the logo is fully visible without stretching */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    margin: 0; /* Adjust the margin to keep spacing balanced */
     opacity: 1;
-    margin: 2rem;
+    aspect-ratio: 16/10;
+}
+.banner__img:nth-child(2),
+.banner__img:nth-child(4) {
+    object-fit: cover;
+}
+
+.banner__img:nth-child(3) {
+    width: auto; /* The 3rd item has a smaller width */
+    height: 7.5rem;
+    aspect-ratio: 16/10;
 }
 
 .banner__img:hover {
-    filter: grayscale(0%); /* Removes greyscale effect on hover */
+    filter: grayscale(0%); /* Removes grayscale effect on hover */
 }

@@ -6,9 +6,9 @@ const cardData = [
     id: 1,
     images: [{ id: 1, img: "featured-image-1.webp", alt: "Image 1A" }],
     text: {
-      text_h2: "Guaranteed Rental Income",
+      text_h2: "No More Voids",
       text_p1:
-        "As a landlord, you benefit from a guaranteed rental income. We secure long-term tenants (typically 3-5 year leases) to eliminate void periods and deliver consistent returns. During this time, we manage every aspect of the tenancy, providing you with a completely hands-off experience.",
+        "Our landlords receive a constant monthly rental payment throughout the entire duration of our agreement. Once we take your property on long-term (typically 3–5 years), all tenants become our responsibility. We handle every aspect of the tenancy — including sourcing, vetting, contracts, and legal obligations — ensuring full compliance and professional management. As our client, you enjoy a smooth, effortless experience with no day-to-day involvement required.",
       text_p2:
         "Your property is professionally managed by our experienced team and occupied by high-quality professionals. Professional cleaning ensures it remains in great condition, protecting your investment.",
     },
@@ -19,7 +19,7 @@ const cardData = [
     text: {
       text_h2: "Complimentary Cosmetic Upgrades",
       text_p1:
-        "Our dedicated team performs complimentary cosmetic upgrades and fully furnishes and stages the property to enhance its appeal to discerning professional tenants.",
+        "Our dedicated team carries out complimentary cosmetic upgrades and fully furnishes and stages the property to maximise its appeal to high-quality tenants. We take responsibility for the ongoing management of the property, ensuring it is well cared for and occupied by reliable residents. Regular cleaning keeps your home in excellent condition throughout the term of our agreement, helping to protect and preserve your investment.",
       text_p2:
         "This adds value to your property, and our regular professional cleaning ensures it will be returned to you in excellent condition, giving you peace of mind.",
     },

@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--clr-accent5);
+    /*background-color: #111;*/
 
     opacity: 1;
     font-family: var(--ff-primary);
@@ -84,6 +85,7 @@
     font-weight: var(--fw-semibold);
     text-decoration: none;
     color: var(--clr-accent4);
+    /*color: #fdf4e3;*/
 }
 
 .nav__link:hover {
@@ -106,6 +108,7 @@
     width: 5rem;
     height: 4rem;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .menu span {
@@ -120,10 +123,15 @@
 }
 
 /* Hover effect */
+
+.menu:hover {
+    filter: brightness(1.4);
+}
+
 .menu:hover span {
     background-color: var(--clr-accent2);
     filter: brightness(1.4);
-    box-shadow: 0 0 50px rgba(237, 63, 39, 0.9);
+    box-shadow: 0 0 30px rgba(237, 63, 39, 0.7);
 }
 
 /* MOBILE STYLES (< 900px) */
