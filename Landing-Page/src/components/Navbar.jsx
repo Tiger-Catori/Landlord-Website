@@ -10,10 +10,10 @@ export default NavbarComponent;
 
 const NavbarSection = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // When user scrolls 50px, activate sticky mode
       if (window.scrollY > 50) {
         setIsSticky(true);
       } else {
@@ -25,15 +25,31 @@ const NavbarSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // close mobile menu on resize up to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Navbar
       expand="lg"
-      className={`navbar navbar-dark nav__bar ${isSticky ? "navbar--sticky" : ""}`}
+      className={`navbar navbar-dark nav__bar ${
+        isSticky ? "navbar--sticky" : ""
+      }`}
     >
       <Container className="nav__section">
         <Logo />
-        <NavLinks />
-        <NavbarHamburger />
+        <NavLinks isOpen={isMenuOpen} />
+        <NavbarHamburger
+          isOpen={isMenuOpen}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        />
       </Container>
     </Navbar>
   );
@@ -43,21 +59,16 @@ const NavbarSection = () => {
 const Logo = () => {
   return (
     <Navbar.Brand href="#" className="logo__img-container">
-      <img
-        src="/images/logos/Logo2.webp"
-        // src="/images/logos/Logo-icon.webp"
-        alt="Logo"
-        className="logo__img"
-      />
+      <img src="/images/logos/Logo2.webp" alt="Logo" className="logo__img" />
     </Navbar.Brand>
   );
 };
 
 // Nav links
-const NavLinks = () => {
+const NavLinks = ({ isOpen }) => {
   return (
-    <Nav className="nav__links">
-      <Nav.Link className="nav__link" href="#">
+    <Nav className={`nav__links ${isOpen ? "nav__links--open" : ""}`}>
+      <Nav.Link className="nav__link" href="#home">
         <span>Home</span>
       </Nav.Link>
       <Nav.Link className="nav__link" href="#">
@@ -74,40 +85,12 @@ const NavLinks = () => {
 };
 
 // Navbar Hamburger
-const NavbarHamburger = () => {
+const NavbarHamburger = ({ isOpen, onClick }) => {
   return (
-    <div className="menu">
+    <div className={`menu ${isOpen ? "menu--open" : ""}`} onClick={onClick}>
       <span></span>
       <span></span>
       <span></span>
     </div>
   );
 };
-
-// const NavbarComponent = () => {
-//   return (
-//     <Navbar expand="lg" sticky="top" className="navbar navbar-dark">
-//       <Container className="nav__section">
-//         {/* Logo */}
-//         {/* <Logo />*/}
-//         {/* Navbar toggle for mobile */}
-//         {/* <Navbar.Toggle
-//           aria-controls="main-nav"
-//           className="navbar-toggler"
-//           data-bs-toggle="collapse"
-//           data-bs-target="#main-nav"
-//           aria-expanded="false"
-//           aria-label="Toggle navigation"
-//         />*/}
-
-//         {/* Navbar links */}
-//         <Navbar.Collapse>
-//           <Nav className="ml-auto nav__section">
-//             <Logo />
-//             <NavLinks />
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
