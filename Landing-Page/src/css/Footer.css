@@ -42,6 +42,7 @@
     gap: 10rem; /* spacing between columns */
     padding-top: 4.2rem;
     margin: 0 auto 2.4rem auto;
+    /*margin-right: 10rem;*/
     max-width: 110rem;
     width: 100%;
 }
@@ -211,6 +212,7 @@
     .footer-row {
         flex-direction: column;
         gap: 3rem;
+        margin-left: -3rem;
         /*text-align: center;*/
     }
 

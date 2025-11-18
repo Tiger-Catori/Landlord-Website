@@ -3,7 +3,7 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
-    overflow-x: none;
+    /*overflow-x: none;*/
 }
 
 body {
@@ -11,6 +11,13 @@ body {
     font-family: var(--ff-primary);
     line-height: 1.6;
     overflow-x: none;
+    overflow-x: hidden;
     background-color: #fff;
     /*background-color: var(--clr-accent4);*/
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }

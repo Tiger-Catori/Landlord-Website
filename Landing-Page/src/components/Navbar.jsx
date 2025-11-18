@@ -33,6 +33,7 @@ const NavbarSection = () => {
       <Container className="nav__section">
         <Logo />
         <NavLinks />
+        <NavbarHamburger />
       </Container>
     </Navbar>
   );
@@ -69,6 +70,17 @@ const NavLinks = () => {
         <span>Contact us</span>
       </Nav.Link>
     </Nav>
+  );
+};
+
+// Navbar Hamburger
+const NavbarHamburger = () => {
+  return (
+    <div className="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   );
 };
 
