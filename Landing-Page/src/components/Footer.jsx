@@ -42,7 +42,12 @@ const FooterLinks = () => {
   ];
 
   return (
-    <div className="footer-col col-one">
+    <div
+      className="footer-col col-one"
+      data-aos-delay="100"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
       <h4>Sitemap</h4>
       <ul className="footer-links site-map">
         {sitemapLinks.map((link) => (
@@ -80,7 +85,12 @@ const FooterSocialLinks = () => {
   ];
 
   return (
-    <div className="footer-col col-two">
+    <div
+      className="footer-col col-two"
+      data-aos-delay="100"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
       <h4>Follow me</h4>
       <ul className="footer-links social-links">
         {socialLinks.map((link) => (
