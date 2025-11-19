@@ -4,15 +4,16 @@
 
 .section__hero {
     position: relative;
-    min-height: 70vh;
+    min-height: 70vh; /* Adjust this if you want the hero section to take more space */
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
+    padding-top: 10rem;
     opacity: 0.84;
-    margin-top: 5rem;
+    margin-top: 0; /* Remove margin-top to align the hero section to the top */
 }
 
 /* Background image */
@@ -46,7 +47,7 @@
     max-width: 150rem;
     width: 100%;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 0; /* Ensure no margin pushes the content down */
     margin-bottom: 2rem;
     z-index: 2;
     gap: 4rem;

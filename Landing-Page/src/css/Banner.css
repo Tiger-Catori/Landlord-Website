@@ -54,7 +54,10 @@
     object-fit: cover;
 }
 
-.banner__img:nth-child(4),
+.banner__img:nth-child(4) {
+    height: 6.5rem;
+}
+
 .banner__img:nth-child(5) {
     width: auto; /* The 3rd item has a smaller width */
     height: 7.5rem;

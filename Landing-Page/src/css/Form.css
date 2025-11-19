@@ -37,6 +37,7 @@
     width: 100%;
     padding: 3.2rem 4.8rem;
     background-color: #fff;
+    /* border: 3px solid var(--clr-accent2); */
     border-radius: 16px;
     display: flex;
     flex-direction: column;
