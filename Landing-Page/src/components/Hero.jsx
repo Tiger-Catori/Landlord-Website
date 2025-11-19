@@ -21,7 +21,12 @@ const Hero = () => {
 
 const HeroText = () => {
   return (
-    <div className="hero__text">
+    <div
+      className="hero__text"
+      data-aos-delay="100"
+      data-aos="fade-right"
+      data-aos-duration="1500"
+    >
       <h2 className="heading hero__head">
         Manage <span>Less,</span> Earn <span>More</span>
       </h2>
@@ -38,7 +43,12 @@ const HeroText = () => {
 
 const HeroImage = () => {
   return (
-    <div className="hero__image">
+    <div
+      className="hero__image"
+      data-aos-delay="100"
+      data-aos="flip-left"
+      data-aos-duration="1500"
+    >
       <div className="container__img">
         <img
           className="hero__img"

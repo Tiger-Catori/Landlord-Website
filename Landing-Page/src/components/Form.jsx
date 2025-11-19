@@ -13,7 +13,11 @@ const FormSection = () => {
         <div className="form__container">
           <Form />
 
-          <div className="container__image">
+          <div
+            className="container__image"
+            data-aos="flip-left"
+            data-aos-duration="1500"
+          >
             <img src="images/general/form-image.webp" alt="" />
           </div>
         </div>
@@ -24,7 +28,12 @@ const FormSection = () => {
 
 const Form = () => {
   return (
-    <div className="form__section" id="form2__box">
+    <div
+      className="form__section"
+      id="form2__box"
+      data-aos="flip-right"
+      data-aos-duration="1500"
+    >
       {/* <form action="submit_form.php" method="POST" className="web__form">*/}
       <form action="" method="POST" className="web__form">
         <FormHeading />

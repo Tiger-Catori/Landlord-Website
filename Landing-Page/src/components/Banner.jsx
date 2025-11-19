@@ -33,7 +33,12 @@ const Banner = () => {
   ];
   return (
     <section className="section__banner">
-      <div className="banner__container">
+      <div
+        className="banner__container"
+        data-aos-delay="250"
+        data-aos="flip-right"
+        data-aos-duration="1000"
+      >
         <BannerItem bannerItems={bannerItems} />
       </div>
     </section>
@@ -42,7 +47,12 @@ const Banner = () => {
 
 const BannerItem = ({ bannerItems }) => {
   return (
-    <div className="banner__items">
+    <div
+      className="banner__items"
+      // data-aos-delay="100"
+      // data-aos="flip-left"
+      // data-aos-duration="1000"
+    >
       {bannerItems.map((item) => (
         <img
           key={item.id}
@@ -55,3 +65,6 @@ const BannerItem = ({ bannerItems }) => {
     </div>
   );
 };
+// data-aos-delay="100"
+// data-aos="flip-left"
+// data-aos-duration="1000"

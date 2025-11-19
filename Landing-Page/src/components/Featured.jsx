@@ -55,17 +55,31 @@ const FeaturedSection = () => {
         providing a genuinely hands-off, passive income.
       </p>
       <div className="featured__cards-wrapper">
-        {cardData.map((card) => (
-          <FeaturedCard key={card.id} images={card.images} text={card.text} />
+        {cardData.map((card, index) => (
+          <FeaturedCard
+            key={card.id}
+            images={card.images}
+            text={card.text}
+            index={index}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-const FeaturedCard = ({ images, text }) => {
+const FeaturedCard = ({ images, text, index }) => {
+  // Determine animation direction based on index (0-based)
+  const animation = index % 2 === 0 ? "fade-right" : "fade-left";
+
   return (
-    <div className="featured__card">
+    <div
+      className="featured__card"
+      data-aos={animation}
+      data-aos-duration="1200"
+      data-aos-easing="ease-out-quart"
+      data-aos-delay="200"
+    >
       <FeaturedImage featuredImages={images} />
       <FeaturedText featuredText={[text]} />
     </div>
