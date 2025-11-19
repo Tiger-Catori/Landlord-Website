@@ -22,11 +22,12 @@ const Banner = () => {
   const bannerItems = [
     { id: 1, img: "prs-logo.svg", alt: "Property Redress Scheme" },
     { id: 2, img: "nhs-logo.svg", alt: "National Health Service" },
-    { id: 3, img: "ico-logo.svg", alt: "Information Commissioner's Office" },
-    { id: 4, img: "property-ombudsman-logo.svg", alt: "Property Ombudsman" },
+    { id: 3, img: "property-ombudsman-logo.svg", alt: "Property Ombudsman" },
+    { id: 4, img: "ico-logo.svg", alt: "Information Commissioner's Office" },
+    // { id: 4, img: "property-ombudsman-logo.svg", alt: "Property Ombudsman" },
     {
       id: 5,
-      img: "nrla-logo.svg",
+      img: "nrla2-logo.webp",
       alt: "National Residential Landlords Association",
     },
   ];

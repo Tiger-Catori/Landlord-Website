@@ -13,6 +13,7 @@
     width: 100%;
     filter: brightness(1.2);
     border-bottom: 6px solid var(--clr-accent2);
+    /*border-top: 6px solid var(--clr-accent2);*/
 }
 
 /* Banner container and items */
@@ -30,8 +31,11 @@
     justify-content: space-evenly;
     align-items: center; /* Ensure vertical alignment */
     width: 100%;
-    max-width: 130rem;
-    padding: 0;
+    max-width: 140rem;
+    padding: 0.5rem 0;
+    /*padding-bottom: 0.5rem;*/
+    column-gap: 2rem;
+    flex-wrap: wrap;
 }
 
 /* Banner image styling */
@@ -46,11 +50,12 @@
     aspect-ratio: 16/10;
 }
 .banner__img:nth-child(2),
-.banner__img:nth-child(4) {
+.banner__img:nth-child(3) {
     object-fit: cover;
 }
 
-.banner__img:nth-child(3) {
+.banner__img:nth-child(4),
+.banner__img:nth-child(5) {
     width: auto; /* The 3rd item has a smaller width */
     height: 7.5rem;
     aspect-ratio: 16/10;

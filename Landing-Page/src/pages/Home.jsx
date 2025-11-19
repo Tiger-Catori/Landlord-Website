@@ -14,6 +14,7 @@ const Home = () => {
       <BannerComponent />
       <FeaturedSection />
       <FormComponent />
+      {/* <BannerComponent />*/}
       <FooterComponent />
     </>
   );
