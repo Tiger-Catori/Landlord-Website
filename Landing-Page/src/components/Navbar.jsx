@@ -71,7 +71,7 @@ const NavLinks = ({ isOpen }) => {
       <Nav.Link className="nav__link" href="#home">
         <span>Home</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#">
+      <Nav.Link className="nav__link" href="#about">
         <span>About us</span>
       </Nav.Link>
       <Nav.Link className="nav__link" href="#how-it-works">

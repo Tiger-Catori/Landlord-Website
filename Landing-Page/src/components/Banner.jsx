@@ -33,12 +33,7 @@ const Banner = () => {
   ];
   return (
     <section className="section__banner">
-      <div
-        className="banner__container"
-        data-aos-delay="250"
-        data-aos="flip-right"
-        data-aos-duration="1000"
-      >
+      <div className="banner__container">
         <BannerItem bannerItems={bannerItems} />
       </div>
     </section>
@@ -47,24 +42,19 @@ const Banner = () => {
 
 const BannerItem = ({ bannerItems }) => {
   return (
-    <div
-      className="banner__items"
-      // data-aos-delay="100"
-      // data-aos="flip-left"
-      // data-aos-duration="1000"
-    >
-      {bannerItems.map((item) => (
+    <div className="banner__items">
+      {bannerItems.map((item, index) => (
         <img
           key={item.id}
-          // src={`/images/banner/webp/${item.img}`}
           src={`/images/banner/svg/${item.img}`}
           alt={item.alt}
           className="banner__img"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay={index * 300} // 0ms, 300ms, 600ms, 900ms, 1200ms
+          data-aos-easing="ease-out-quart"
         />
       ))}
     </div>
   );
 };
-// data-aos-delay="100"
-// data-aos="flip-left"
-// data-aos-duration="1000"

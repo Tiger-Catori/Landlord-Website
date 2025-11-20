@@ -71,7 +71,6 @@ const FeaturedSection = () => {
 const FeaturedCard = ({ images, text, index }) => {
   // Determine animation direction based on index (0-based)
   const animation = index % 2 === 0 ? "fade-right" : "fade-left";
-
   return (
     <div
       className="featured__card"

@@ -141,6 +141,12 @@
     box-shadow: 0 0 30px rgba(237, 63, 39, 0.7);
 }
 
+@media (max-width: 1200px) {
+    .navbar__links {
+        justify-content: space-around;
+    }
+}
+
 /* MOBILE STYLES (< 900px) */
 @media (max-width: 900px) {
     .menu {
@@ -187,5 +193,11 @@
         font-weight: var(--fw-reg);
         padding: 0.4rem 0;
         margin-left: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar__links {
+        justify-content: space-around;
     }
 }

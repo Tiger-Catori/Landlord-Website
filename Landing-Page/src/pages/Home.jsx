@@ -5,6 +5,7 @@ import BannerComponent from "../components/Banner";
 import FeaturedSection from "../components/Featured";
 import FooterComponent from "../components/Footer";
 import FormComponent from "../components/Form";
+import AboutComponent from "../components/About";
 
 const Home = () => {
   return (
@@ -13,8 +14,8 @@ const Home = () => {
       <HeroComponent />
       <BannerComponent />
       <FeaturedSection />
+      <AboutComponent />
       <FormComponent />
-      {/* <BannerComponent />*/}
       <FooterComponent />
     </>
   );
