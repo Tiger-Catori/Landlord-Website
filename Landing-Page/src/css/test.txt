@@ -54,3 +54,23 @@ const FeaturedText = ({ featuredText, animation }) => {
     </div>
   );
 };
+
+
+// const BannerItem = ({ bannerItems }) => {
+//   return (
+//     <div className="banner__items">
+//       {bannerItems.map((item, index) => (
+//         <img
+//           key={item.id}
+//           src={`/images/banner/svg/${item.img}`}
+//           alt={item.alt}
+//           className="banner__img"
+//           data-aos="fade-right"
+//           data-aos-duration="2000"
+//           data-aos-delay={index * 300} // 0ms, 300ms, 600ms, 900ms, 1200ms
+//           data-aos-easing="ease-out-quart"
+//         />
+//       ))}
+//     </div>
+//   );
+// };

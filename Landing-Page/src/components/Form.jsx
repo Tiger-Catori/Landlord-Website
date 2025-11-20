@@ -33,6 +33,7 @@ const Form = () => {
       id="form2__box"
       data-aos="flip-right"
       data-aos-duration="1500"
+      data-aos-delay="500"
     >
       {/* <form action="submit_form.php" method="POST" className="web__form">*/}
       <form action="" method="POST" className="web__form">

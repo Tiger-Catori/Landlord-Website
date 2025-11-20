@@ -50,7 +50,7 @@ const BannerItem = ({ bannerItems }) => {
           alt={item.alt}
           className="banner__img"
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="1200"
           data-aos-delay={index * 300} // 0ms, 300ms, 600ms, 900ms, 1200ms
           data-aos-easing="ease-out-quart"
         />
