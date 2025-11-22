@@ -45,15 +45,7 @@ export default FeaturedComponent;
 const FeaturedSection = () => {
   return (
     <div className="featured__section" id="how-it-works">
-      <h2 className="featured__text__title" id="featured-title">
-        Quick wins, rewarding outcomes
-      </h2>
-      <p className="featured__text__description" id="featured__p">
-        Help4Landlords delivers a level of service that goes beyond traditional
-        letting. Our modern, all-in-one solution removes the usual burdens
-        landlords face—ensuring properties are expertly cared for while
-        providing a genuinely hands-off, passive income.
-      </p>
+      <FeaturedHeading />
       <div className="featured__cards-wrapper">
         {cardData.map((card, index) => (
           <FeaturedCard
@@ -110,6 +102,22 @@ const FeaturedImage = ({ featuredImages }) => {
           className="featured__img"
         />
       ))}
+    </div>
+  );
+};
+
+const FeaturedHeading = () => {
+  return (
+    <div className="featured__head">
+      <h2 className="featured__text__title" id="featured-title">
+        Quick wins, rewarding outcomes
+      </h2>
+      <p className="featured__text__description" id="featured__p">
+        Help4Landlords delivers a level of service that goes beyond traditional
+        letting. Our modern, all-in-one solution removes the usual burdens
+        landlords face; ensuring properties are expertly cared for while
+        providing a genuinely hands-off, passive income.
+      </p>
     </div>
   );
 };

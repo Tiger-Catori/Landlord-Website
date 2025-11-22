@@ -3,9 +3,10 @@ import NavbarComponment from "../components/Navbar";
 import HeroComponent from "../components/Hero";
 import BannerComponent from "../components/Banner";
 import FeaturedSection from "../components/Featured";
-import FooterComponent from "../components/Footer";
+import FaqComponent from "../components/Faqs";
 import FormComponent from "../components/Form";
 import AboutComponent from "../components/About";
+import FooterComponent from "../components/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <BannerComponent />
       <FeaturedSection />
       <AboutComponent />
+      <FaqComponent />
       <FormComponent />
       <FooterComponent />
     </>

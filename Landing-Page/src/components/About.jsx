@@ -51,19 +51,18 @@ const AboutText = () => {
         About Help4Landlords
       </h2>
       <p className="=about__text__description" id="about__p">
-        As industry leaders, we offer guaranteed rent and outstanding value for
-        landlords. Our expertise is in delivering high-quality shared (HMO) and
-        serviced accommodation that keeps your property fully managed and
-        completely hassle-free.
+        Help4Landlords is a property management company dedicated to making
+        property ownership a hassle-free experience. We understand the
+        challenges landlords face, from finding reliable tenants to managing
+        maintenance and upgrades. That's why we offer a unique approach that
+        combines guaranteed rent, complimentary cosmetic refurbishments, and
+        full maintenance management – all at no additional cost to landlords.
       </p>
       <p className="=about__text__description" id="about__p">
-        We recognise the importance of providing tenants with a comfortable,
-        safe, and welcoming living environment, while ensuring landlords enjoy a
-        profitable and hands-off investment.
-      </p>
-      <p className="=about__text__description" id="about__p">
-        Partner with Help4Landlords and see the difference a dedicated,
-        experienced, and professional team can make.
+        We're a family-run business with big ambitions, driven by a passion for
+        exceptional service. We treat our clients like partners and their
+        properties as our own, fostering long-term relationships based on trust
+        and transparency.
       </p>
     </div>
   );

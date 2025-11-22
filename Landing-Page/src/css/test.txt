@@ -74,3 +74,21 @@ const FeaturedText = ({ featuredText, animation }) => {
 //     </div>
 //   );
 // };
+
+
+/* Alternating colors */
+.faq-item:nth-child(4n + 1) .faq__question,
+.faq-item:nth-child(4n + 2) .faq__question,
+.faq-item:nth-child(4n + 1) .faq__answer,
+.faq-item:nth-child(4n + 2) .faq__answer {
+    background-color: var(--clr-accent5);
+    color: var(--clr-accent4);
+}
+
+.faq-item:nth-child(4n + 3) .faq__question,
+.faq-item:nth-child(4n + 4) .faq__question,
+.faq-item:nth-child(4n + 3) .faq__answer,
+.faq-item:nth-child(4n + 4) .faq__answer {
+    background-color: var(--clr-accent2);
+    color: var(--clr-accent4);
+}

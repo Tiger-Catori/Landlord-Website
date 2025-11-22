@@ -208,7 +208,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .footer-row {
         flex-direction: column;
         gap: 3rem;
