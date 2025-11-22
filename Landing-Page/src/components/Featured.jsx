@@ -120,7 +120,7 @@ const FeaturedHeading = () => {
       <p
         className="featured__text__description"
         id="featured__p"
-        data-aos="fade-right"
+        data-aos="fade-left"
         data-aos-duration="1500"
       >
         Help4Landlords delivers a level of service that goes beyond traditional

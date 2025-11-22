@@ -58,7 +58,7 @@ const AboutText = () => {
       <p
         className="=about__text__description"
         id="about__p"
-        data-aos="fade-left"
+        data-aos="fade-right"
         data-aos-duration="1500"
       >
         Help4Landlords is a property management company dedicated to making
