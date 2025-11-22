@@ -65,8 +65,8 @@
 /* ✔ UNIVERSAL (Firefox, Modern)   */
 
 html {
-    scrollbar-width: thick; /* auto | thin | none */
-    scrollbar-color: var(--clr-accent2) var(--clr-headings);
+    scrollbar-width: thin; /* auto | thin | none */
+    scrollbar-color: var(--clr-accent2) var(--clr-accent4);
     /*    thumb                 track          */
 }
 
@@ -74,19 +74,19 @@ html {
 /* (Chrome, Edge, Safari, Opera)  */
 
 html::-webkit-scrollbar {
-    width: 0.8rem; /* width of the scrollbar */
+    width: 0.6rem; /* width of the scrollbar */
     height: 1rem;
 }
 
 html::-webkit-scrollbar-track {
-    background: var(--clr-headings); /* track color */
+    background: var(--clr-accent2); /* track color */
 }
 
 html::-webkit-scrollbar-thumb {
     background-color: var(--clr-accent2); /* scroll thumb */
     border-radius: 100px; /* round shape */
     filter: brightness(1.6);
-    border: 2px solid var(--clr-headings); /* optional outline for contrast */
+    border: 2px solid var(--clr-accent2); /* optional outline for contrast */
 }
 
 /* OPTIONAL: hover glow */
