@@ -3,9 +3,10 @@ import NavbarComponment from "../components/Navbar";
 import HeroComponent from "../components/Hero";
 import BannerComponent from "../components/Banner";
 import FeaturedSection from "../components/Featured";
-import FaqComponent from "../components/Faqs";
-import FormComponent from "../components/Form";
 import AboutComponent from "../components/About";
+import FaqComponent from "../components/Faqs";
+import VideoComponent from "../components/Video";
+import FormComponent from "../components/Form";
 import FooterComponent from "../components/Footer";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <FeaturedSection />
       <AboutComponent />
       <FaqComponent />
+      <VideoComponent />
       <FormComponent />
       <FooterComponent />
     </>

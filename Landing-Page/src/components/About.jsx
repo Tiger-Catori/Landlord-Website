@@ -47,10 +47,20 @@ const AboutSection = () => {
 const AboutText = () => {
   return (
     <div className="about__text">
-      <h2 className="about__text__title" id="about-title">
+      <h2
+        className="about__text__title"
+        id="about-title"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
         About Help4Landlords
       </h2>
-      <p className="=about__text__description" id="about__p">
+      <p
+        className="=about__text__description"
+        id="about__p"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
         Help4Landlords is a property management company dedicated to making
         property ownership a hassle-free experience. We understand the
         challenges landlords face, from finding reliable tenants to managing
@@ -58,7 +68,12 @@ const AboutText = () => {
         combines guaranteed rent, complimentary cosmetic refurbishments, and
         full maintenance management – all at no additional cost to landlords.
       </p>
-      <p className="=about__text__description" id="about__p">
+      <p
+        className="=about__text__description"
+        id="about__p"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
         We're a family-run business with big ambitions, driven by a passion for
         exceptional service. We treat our clients like partners and their
         properties as our own, fostering long-term relationships based on trust

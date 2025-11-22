@@ -109,10 +109,20 @@ const FeaturedImage = ({ featuredImages }) => {
 const FeaturedHeading = () => {
   return (
     <div className="featured__head">
-      <h2 className="featured__text__title" id="featured-title">
+      <h2
+        className="featured__text__title"
+        id="featured-title"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+      >
         Quick wins, rewarding outcomes
       </h2>
-      <p className="featured__text__description" id="featured__p">
+      <p
+        className="featured__text__description"
+        id="featured__p"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+      >
         Help4Landlords delivers a level of service that goes beyond traditional
         letting. Our modern, all-in-one solution removes the usual burdens
         landlords face; ensuring properties are expertly cared for while
