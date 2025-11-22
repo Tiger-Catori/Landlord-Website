@@ -8,7 +8,7 @@ export default FaqComponent;
 
 const FaqWrapper = () => {
   return (
-    <div className="faq__wrapper">
+    <div className="faq__wrapper" id="FAQs">
       <Accordion />
     </div>
   );
@@ -44,7 +44,7 @@ const Accordion = () => {
     {
       question: "How do you ensure the properties are taken care of?",
       answer:
-        "Our business model relies on maintaining properties in excellent condition. We include regular maintenance and handle tenant-caused repairs to protect the property's value and ensure smooth tenancies. We also conduct rigorous screening to attract high-quality professional tenants.",
+        "Our business model relies on maintaining properties in excellent condition. We include regular maintenance and handle tenant-caused repairs to protect the property's value and ensure smooth tenancies. We also conduct rigorous screening to attract high-quality tenants.",
     },
     {
       question: "Who is responsible for HMO licensing?",

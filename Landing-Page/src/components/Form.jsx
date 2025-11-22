@@ -9,7 +9,7 @@ export default FormComponent;
 const FormSection = () => {
   return (
     <>
-      <section className="section section__form">
+      <section className="section section__form" id="form-section">
         <div className="form__container">
           <Form />
 

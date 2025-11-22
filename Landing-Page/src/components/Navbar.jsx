@@ -71,13 +71,16 @@ const NavLinks = ({ isOpen }) => {
       <Nav.Link className="nav__link" href="#home">
         <span>Home</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#about">
-        <span>About us</span>
-      </Nav.Link>
       <Nav.Link className="nav__link" href="#how-it-works">
         <span>How it works</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#">
+      <Nav.Link className="nav__link" href="#about">
+        <span>About us</span>
+      </Nav.Link>
+      <Nav.Link className="nav__link" href="#FAQs">
+        <span>FAQs</span>
+      </Nav.Link>
+      <Nav.Link className="nav__link" href="#form-section">
         <span>Contact us</span>
       </Nav.Link>
     </Nav>
