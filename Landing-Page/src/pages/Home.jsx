@@ -17,8 +17,9 @@ const Home = () => {
       <BannerComponent />
       <FeaturedSection />
       <AboutComponent />
-      <FaqComponent />
       <VideoComponent />
+      <FaqComponent />
+      {/* <VideoComponent />*/}
       <FormComponent />
       <FooterComponent />
     </>

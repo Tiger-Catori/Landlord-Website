@@ -27,7 +27,7 @@ const Video = () => {
       allowfullscreen
       data-aos="flip-up"
       data-aos-duration="1500"
-      data-aos-delay="1000"
+      data-aos-delay="500"
     ></iframe>
   );
 };
