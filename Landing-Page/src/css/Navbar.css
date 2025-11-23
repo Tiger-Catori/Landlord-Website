@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     background-color: #111; /* Set initial background color to #111 */
-    opacity: 0.87; /* Set initial opacity to 0.87 */
+    opacity: 0.85; /* Set initial opacity to 0.87 */
     font-family: var(--ff-primary);
     padding: 1rem;
     border-bottom: 1px solid var(--clr-accent5);
@@ -168,6 +168,7 @@
     }
 
     /* Dropdown card when menu is toggled open */
+    /* Instead of opacity, use a semi-transparent background color */
     .nav__links.nav__links--open {
         display: flex !important;
         flex-direction: column;
@@ -177,12 +178,19 @@
         width: min(240px, 80vw);
         padding: 2rem;
         margin-top: 1rem;
-        background-color: #111;
+        background-color: rgba(
+            0,
+            0,
+            0,
+            0.99
+        ); /* 85% opaque, adjust alpha as needed */
         border-radius: 1.2rem;
         border-top-right-radius: 0;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
         row-gap: 1rem;
         z-index: 30;
+        /* remove any opacity property if present */
+        /* opacity: 1; or just no opacity setting */
     }
 
     .nav__link {

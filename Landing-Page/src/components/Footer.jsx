@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import "../css/Footer.css";
 
 const FooterComponent = () => {
-  <Footer />;
+  return <Footer />;
 };
+export default FooterComponent;
 
 const Footer = () => {
   return (
@@ -21,8 +22,6 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
 
 const FooterLogo = () => {
   return (
@@ -122,10 +121,11 @@ const FooterBottom = () => {
       </p>
 
       <p>
-        <a href="#">Terms & Conditions</a>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
       </p>
+
       <p>
-        <a href="#">Privacy Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>
       </p>
     </div>
   );

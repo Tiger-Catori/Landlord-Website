@@ -1,34 +1,38 @@
+// App.js
 import { Routes, Route } from "react-router-dom";
+
 import "./css/App.css";
 import NavbarComponent from "./components/Navbar";
 import Home from "./pages/Home";
-import "aos/dist/aos.css"; // Import AOS styles
-import AOS from "aos"; // Import AOS library
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"; // import privacy policy page
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage"; // import terms and conditions page
+import "aos/dist/aos.css";
+import AOS from "aos";
 import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true, // Animation only triggers once on scroll
+      once: true,
       easing: "ease-out-quad",
     });
-
-    // Optional: Refresh AOS when routes change (useful for SPA navigation)
-    const handleRouteChange = () => {
-      AOS.refresh();
-    };
-
-    handleRouteChange(); // Refresh on initial load
-
-    // If you later add route changes that load new animated content,
-    // you’d call AOS.refresh() again via a router listener.
+    AOS.refresh();
   }, []);
 
   return (
     <div className="container__body" id="home">
+      <NavbarComponent />
       <main className="main__content">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditionsPage />}
+          />
+          {/* Add more routes here if needed */}
+        </Routes>
       </main>
     </div>
   );

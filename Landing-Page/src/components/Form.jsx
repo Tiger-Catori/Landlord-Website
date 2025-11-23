@@ -1,5 +1,7 @@
 import "../css/Form.css";
 
+import { Link } from "react-router-dom";
+
 const FormComponent = () => {
   return <FormSection />;
 };
@@ -123,7 +125,7 @@ const AgreementCheckbox = () => (
     <label htmlFor="subscribe" className="label">
       I agree to have my information stored&nbsp;
       <span>
-        <a href="#">Privacy Policy.</a>
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </span>
     </label>
   </div>

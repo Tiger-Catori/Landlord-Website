@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
   return <NavbarSection />;
@@ -65,22 +66,75 @@ const Logo = () => {
 };
 
 // Nav links
+
 const NavLinks = ({ isOpen }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = (hash) => {
+    if (location.pathname === "/") {
+      // Already on Home page
+      navigate({ pathname: "/", hash: `#${hash}` }, { replace: false });
+      // Then manually scroll (with small delay) to ensure element exists
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 50);
+    } else {
+      // Navigate to home and include hash
+      navigate({ pathname: "/", hash: `#${hash}` }, { replace: false });
+      // Then scroll after a small delay
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <Nav className={`nav__links ${isOpen ? "nav__links--open" : ""}`}>
-      <Nav.Link className="nav__link" href="#home">
+      <Nav.Link
+        as={Link}
+        className="nav__link"
+        to="/"
+        onClick={() => handleClick("home")}
+      >
         <span>Home</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#how-it-works">
+      <Nav.Link
+        as={Link}
+        className="nav__link"
+        to="/"
+        onClick={() => handleClick("how-it-works")}
+      >
         <span>How it works</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#about">
+      <Nav.Link
+        as={Link}
+        className="nav__link"
+        to="/"
+        onClick={() => handleClick("about")}
+      >
         <span>About us</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#FAQs">
+      <Nav.Link
+        as={Link}
+        className="nav__link"
+        to="/"
+        onClick={() => handleClick("FAQs")}
+      >
         <span>FAQs</span>
       </Nav.Link>
-      <Nav.Link className="nav__link" href="#form-section">
+      <Nav.Link
+        as={Link}
+        className="nav__link"
+        to="/"
+        onClick={() => handleClick("form-section")}
+      >
         <span>Contact us</span>
       </Nav.Link>
     </Nav>
