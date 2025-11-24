@@ -62,7 +62,7 @@ const Form = () => {
 
 const FormHeading = () => (
   <div className="heading__container">
-    <h1 className="heading">GET STARTED TODAY!</h1>
+    <h1 className="heading">Get Started!</h1>
     <p>Let us know about you and your goals</p>
   </div>
 );

@@ -20,8 +20,8 @@ const Video = () => {
   return (
     <iframe
       class="iframe"
-      src="https://www.youtube.com/embed/K4TOrB7at0Y?si=xLLsefKE2qG7L_mn"
-      title="YouTube video player"
+      src="https://player.vimeo.com/video/887302572?byline=0&portrait=0&title=0&autoplay=0"
+      title="Feature Video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen

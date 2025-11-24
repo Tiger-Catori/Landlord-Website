@@ -26,7 +26,9 @@
 .container__image img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 25%;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -54,7 +56,9 @@
     text-align: center;
     font-size: calc(1.6rem + 0.4vw);
     font-weight: var(--fw-bold);
+    text-transform: uppercase;
 }
+
 .web__form p {
     text-align: center;
     margin-bottom: 1.6rem;
@@ -202,6 +206,7 @@ textarea {
     font-weight: var(--fw-semibold);
     font-size: calc(1.2rem + 0.4vw);
     margin-bottom: 1.4rem;
+    text-transform: capitalize;
 }
 
 /* Steps wrapper centered */

@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     background-color: #111; /* Set initial background color to #111 */
-    opacity: 0.85; /* Set initial opacity to 0.87 */
+    opacity: 0.67; /* Set initial opacity to 0.87 */
     font-family: var(--ff-primary);
     padding: 1rem;
     border-bottom: 1px solid var(--clr-accent5);
@@ -191,6 +191,10 @@
         z-index: 30;
         /* remove any opacity property if present */
         /* opacity: 1; or just no opacity setting */
+    }
+
+    .navbar:has(.nav__links--open) {
+        opacity: 0.8;
     }
 
     .nav__link {
