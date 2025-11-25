@@ -7,8 +7,8 @@ export default VideoComponent;
 
 const VideoSection = () => {
   return (
-    <section class="section section__video">
-      <div class="video__container">
+    <section className="section section__video">
+      <div className="video__container">
         <VideoText />
         <Video />
       </div>
@@ -19,12 +19,11 @@ const VideoSection = () => {
 const Video = () => {
   return (
     <iframe
-      class="iframe"
+      className="iframe"
       src="https://player.vimeo.com/video/887302572?byline=0&portrait=0&title=0&autoplay=0"
       title="Feature Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
       data-aos="flip-up"
       data-aos-duration="1500"
       data-aos-delay="500"
