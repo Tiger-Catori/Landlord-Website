@@ -23,7 +23,7 @@ const Video = () => {
       src="https://player.vimeo.com/video/887302572?byline=0&portrait=0&title=0&autoplay=0"
       title="Feature Video"
       frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
       data-aos="flip-up"
       data-aos-duration="1500"
       data-aos-delay="500"
