@@ -1,58 +1,89 @@
-/* Section and Banner styling */
 .section__banner {
-    padding: 0; /* Reduced vertical padding to make the banner shorter */
+    padding: 0;
     background-color: var(--clr-accent4);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    opacity: 0.85;
+    height: 100px;
+    overflow: hidden;
     width: 100%;
-    filter: brightness(1);
-    /*border-bottom: 6px solid var(--clr-accent2);*/
-    /*border-top: 6px solid var(--clr-accent2);*/
+    max-width: 130rem;
+    margin: 0 auto;
 }
 
-/* Banner container and items */
-.banner__container {
-    width: 100%;
+/* Outer track that moves */
+.banner__track {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /*background-color: var(--clr-accent2);*/
+    /* Flex direction is row by default */
+    width: max-content; /* allows the two sets to sit side by side */
+    animation: scroll 30s linear infinite; /* unified duration */
 }
 
+/* Pause animation on hover */
+.section__banner:hover .banner__track {
+    animation-play-state: paused;
+}
+
+/* Keyframes — move full width of one set so the duplicate appears seamless */
+/*@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}*/
+
+@keyframes scroll {
+    /*from {
+        translate: 100%;
+    }
+    to {
+        translate: -100%;
+    }*/
+
+    from {
+        translate: 50%;
+    }
+    to {
+        translate: -50%;
+    }
+}
+
+/* Items wrapper */
 .banner__items {
     display: flex;
-    flex-direction: row;
-    /*justify-content: space-between;*/
-    justify-content: space-evenly;
-
-    align-items: center; /* Ensure vertical alignment */
-    width: 100%;
-    max-width: 150rem;
-    padding: 0.5rem 0;
-    /*padding-bottom: 0.5rem;*/
-    /*column-gap: 6rem;*/
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 12rem;
+    margin-right: 14rem;
 }
 
 /* Banner image styling */
 .banner__img {
-    height: auto; /* Keep the images at their original aspect ratio */
-    width: 16rem; /* Keep the fixed uniform width */
-    object-fit: contain; /* Ensures the logo is fully visible without stretching */
+    height: auto; /* keep original aspect ratio */
+    width: 16rem; /* uniform width base */
+    object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
-    margin: 0; /* Adjust the margin to keep spacing balanced */
+    margin: 0;
     opacity: 1;
     aspect-ratio: 16/10;
 }
-.banner__img:nth-child(2),
+
+.banner__img:nth-child(1) {
+    margin-right: -3rem;
+    height: 12.5rem;
+    width: auto;
+}
+
+.banner__img:nth-child(2) {
+    height: 11.5rem;
+    width: auto;
+    object-fit: cover;
+}
+
 .banner__img:nth-child(3) {
+    height: 11.5rem;
+    width: auto;
     object-fit: cover;
 }
 
@@ -61,15 +92,11 @@
 }
 
 .banner__img:nth-child(5) {
-    width: auto; /* The 3rd item has a smaller width */
+    width: auto;
     height: 7.5rem;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
 }
 
 .banner__img:hover {
-    filter: grayscale(0%); /* Removes grayscale effect on hover */
+    filter: grayscale(0%);
 }
-
-/*.banner__img:hover .section__banner {
-    opacity: 1;
-}*/
