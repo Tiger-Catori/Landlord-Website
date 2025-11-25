@@ -4,7 +4,8 @@
 
 .section__hero {
     position: relative;
-    min-height: 70vh; /* Adjust this if you want the hero section to take more space */
+    /*min-height: 80vh; */ /* Adjust this if you want the hero section to take more space */
+    min-height: 89.9vh;
     width: 100%;
     overflow: hidden;
     display: flex;
