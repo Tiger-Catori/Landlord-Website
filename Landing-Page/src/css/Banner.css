@@ -10,57 +10,40 @@
     margin: 0 auto;
 }
 
-/* Outer track that moves */
 .banner__track {
     display: flex;
-    /* Flex direction is row by default */
-    width: max-content; /* allows the two sets to sit side by side */
-    animation: scroll 30s linear infinite; /* unified duration */
+    width: max-content; /* allows items + duplicate to sit side-by-side */
+    /* Use translate3d for smoother GPU accelerated motion (optional) */
+    animation: scroll 15s linear infinite;
 }
 
-/* Pause animation on hover */
 .section__banner:hover .banner__track {
     animation-play-state: paused;
 }
 
-/* Keyframes — move full width of one set so the duplicate appears seamless */
-/*@keyframes scroll {
+@keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
-    }
-}*/
-
-@keyframes scroll {
-    /*from {
-        translate: 100%;
-    }
-    to {
-        translate: -100%;
-    }*/
-
-    from {
-        translate: 50%;
-    }
-    to {
-        translate: -50%;
+        transform: translateX(-50%);
+        /* Note: if you have exactly two sets, 50% works if width of track is double one set.
+       If width is exactly 2× one set, then -50% moves one set width. */
+        /* Alternative: translateX(calc(-100%)) if width is exactly one set. */
     }
 }
 
-/* Items wrapper */
 .banner__items {
     display: flex;
     align-items: center;
     gap: 12rem;
-    margin-right: 14rem;
+    margin-right: 12rem; /* margin contributes to total width of one set */
 }
 
-/* Banner image styling */
+/* Banner image styling kept exactly as you had */
 .banner__img {
-    height: auto; /* keep original aspect ratio */
-    width: 16rem; /* uniform width base */
+    height: auto;
+    width: 16rem;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -75,12 +58,7 @@
     width: auto;
 }
 
-.banner__img:nth-child(2) {
-    height: 11.5rem;
-    width: auto;
-    object-fit: cover;
-}
-
+.banner__img:nth-child(2),
 .banner__img:nth-child(3) {
     height: 11.5rem;
     width: auto;
