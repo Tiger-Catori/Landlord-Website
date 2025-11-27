@@ -1,6 +1,7 @@
 import "../css/Form.css";
-
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 
 const FormComponent = () => {
   return <FormSection />;
@@ -19,6 +20,7 @@ const FormSection = () => {
             className="container__image"
             data-aos="flip-left"
             data-aos-duration="1500"
+            data-aos-delay="1200"
           >
             <img src="images/general/form-image.webp" alt="" />
           </div>
@@ -29,26 +31,48 @@ const FormSection = () => {
 };
 
 const Form = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_saxrs49", // ← replace
+        "template_8arc4fe", // ← replace
+        formRef.current,
+        "HJGGHxDB7ombFB3zD", // ← replace
+      )
+      .then(
+        (result) => {
+          alert("Form submission successful!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send message.");
+        },
+      );
+  };
+
   return (
     <div
       className="form__section"
       id="form2__box"
       data-aos="flip-right"
       data-aos-duration="1500"
-      data-aos-delay="500"
+      data-aos-delay="1200"
     >
-      {/* <form action="submit_form.php" method="POST" className="web__form">*/}
-      <form action="" method="POST" className="web__form">
+      <form ref={formRef} onSubmit={sendEmail} className="web__form">
         <FormHeading />
 
         <div className="input__box">
-          {/* <StrategyDropdown />*/}
           <FormInputs />
         </div>
 
         <AgreementCheckbox />
 
-        <button className="button red-button btn__form">
+        <button className="button red-button btn__form" type="submit">
           <div className="button-content">
             <span className="text">Get Started</span>
           </div>
@@ -67,46 +91,26 @@ const FormHeading = () => (
   </div>
 );
 
-const strategies = [
-  "Simple BTL",
-  "HMO",
-  "Rent 2 Rent",
-  "Serviced Accommodation",
-  "Other",
-];
-
-const StrategyDropdown = () => (
-  <div className="dropdown">
-    <div className="select-menu">
-      <div className="select-btn">
-        <span className="selected">What strategy are you looking to do?</span>
-        <i className="bx bxs-chevron-down"></i>
-      </div>
-    </div>
-
-    <ul className="options">
-      {strategies.map((strategy) => (
-        <li key={strategy} className="option">
-          <span>{strategy}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
 const FormInputs = () => (
   <>
-    <input type="text" className="input" name="name" placeholder="Full name" />
+    <input
+      type="text"
+      className="input"
+      name="from_name"
+      placeholder="Full name"
+      required
+    />
     <input
       type="email"
       className="input"
-      name="email"
+      name="from_email"
       placeholder="Email address"
+      required
     />
     <input
       type="tel"
       className="input"
-      name="phone"
+      name="from_phone"
       placeholder="Phone number"
     />
     <textarea
@@ -115,13 +119,14 @@ const FormInputs = () => (
       className="textarea"
       placeholder="Message..."
       autoComplete="off"
+      required
     />
   </>
 );
 
 const AgreementCheckbox = () => (
   <div className="checkbox-container">
-    <input type="checkbox" id="subscribe" name="subscribe" />
+    <input type="checkbox" id="subscribe" name="subscribe" required />
     <label htmlFor="subscribe" className="label">
       I agree to have my information stored&nbsp;
       <span>
