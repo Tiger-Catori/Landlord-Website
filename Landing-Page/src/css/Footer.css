@@ -178,10 +178,10 @@
 }
 
 /* Icon hover zoom */
-.social-links li a:hover ion-icon {
+/*.social-links li a:hover ion-icon {
     transform: scale(1.2);
     transition: 0.3s;
-}
+}*/
 
 /* Bottom bar */
 .footer__bottom {
@@ -277,3 +277,30 @@
         transform: translateY(-52%) !important;
     }
 }
+
+/* Ensure consistent horizontal layout for social links */
+.footer-social-link {
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: row !important; /* Explicitly horizontal */
+    align-items: center !important;
+    gap: 1.4rem !important; /* Matches your existing gap */
+    text-decoration: none !important;
+    color: var(--clr-accent4) !important;
+}
+
+/* Prevent icon from scaling on hover */
+.social-links li a:hover ion-icon {
+    transform: scale(1) !important; /* Override any previous scale */
+    transition: none !important; /* Or keep transition but no scale */
+    color: var(--clr-accent2) !important;
+}
+
+.social-links li a:hover span {
+    color: var(--clr-accent2) !important;
+}
+
+/*
+.footer-social-link:nth-child(1) {
+    align-items: flex-start !important;
+}*/

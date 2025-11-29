@@ -34,78 +34,6 @@ const FooterLogo = () => {
   );
 };
 
-const FooterSocialLinks = () => {
-  const socialLinks = [
-    {
-      name: "Facebook",
-      icon: "logo-facebook",
-      url: "https://www.facebook.com",
-    },
-    {
-      name: "Instagram",
-      icon: "logo-instagram",
-      url: "https://www.instagram.com",
-    },
-    {
-      name: "Twitter",
-      icon: "logo-twitter",
-      url: "https://www.twitter.com",
-    },
-    {
-      name: "Telegram",
-      icon: "navigate-circle-outline",
-      url: "https://web.telegram.org/a/",
-    },
-  ];
-
-  return (
-    <div
-      className="footer-col col-two"
-      data-aos-delay="100"
-      data-aos="fade-left"
-      data-aos-duration="1000"
-    >
-      <h4>Follow me</h4>
-      <ul className="footer-links social-links">
-        {socialLinks.map((link) => (
-          <li key={link.name}>
-            <a target="_blank" rel="noreferrer" href={link.url}>
-              <ion-icon name={link.icon}></ion-icon>
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const FooterBottom = () => {
-  useEffect(() => {
-    const currentYearElement = document.getElementById("current-year");
-    if (currentYearElement) {
-      currentYearElement.textContent = new Date().getFullYear();
-    }
-  }, []);
-
-  return (
-    <div className="footer__bottom">
-      <p>
-        &copy; <span id="current-year"></span> Help4Landlords. All rights
-        reserved.
-      </p>
-
-      <p>
-        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
-      </p>
-
-      <p>
-        <a href="/privacy-policy">Privacy Policy</a>
-      </p>
-    </div>
-  );
-};
-
 const FooterLinks = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -163,6 +91,83 @@ const FooterLinks = () => {
           </li>
         ))}
       </ul>
+    </div>
+  );
+};
+
+const FooterSocialLinks = () => {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: "logo-facebook",
+      url: "https://www.facebook.com",
+    },
+    {
+      name: "Instagram",
+      icon: "logo-instagram",
+      url: "https://www.instagram.com",
+    },
+    {
+      name: "Twitter (X)",
+      icon: "logo-twitter",
+      url: "https://www.twitter.com",
+    },
+    {
+      name: "Telegram",
+      icon: "navigate-circle-outline",
+      url: "https://web.telegram.org/a/",
+    },
+  ];
+
+  return (
+    <div
+      className="footer-col col-two"
+      data-aos-delay="100"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
+      <h4>Follow me</h4>
+      <ul className="footer-links social-links">
+        {socialLinks.map((link) => (
+          <li key={link.name}>
+            <a
+              className="footer-social-link"
+              target="_blank"
+              rel="noreferrer"
+              href={link.url}
+            >
+              <ion-icon name={link.icon}></ion-icon>
+              <span>{link.name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const FooterBottom = () => {
+  useEffect(() => {
+    const currentYearElement = document.getElementById("current-year");
+    if (currentYearElement) {
+      currentYearElement.textContent = new Date().getFullYear();
+    }
+  }, []);
+
+  return (
+    <div className="footer__bottom">
+      <p>
+        &copy; <span id="current-year"></span> Help4Landlords. All rights
+        reserved.
+      </p>
+
+      <p>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+      </p>
+
+      <p>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </p>
     </div>
   );
 };
