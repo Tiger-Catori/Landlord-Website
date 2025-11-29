@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Nav } from "react-bootstrap";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../css/Footer.css";
 
 const FooterComponent = () => {
@@ -28,33 +30,6 @@ const FooterLogo = () => {
     <div className="footer-col logo-footer">
       <img src="/images/logos/Logo-icon.webp" alt="Help4Landlords Logo" />
       <p>Lorem ipsum dolor sit amet consectetur. Leo lectus petegs</p>
-    </div>
-  );
-};
-
-const FooterLinks = () => {
-  const sitemapLinks = [
-    { name: "Home", url: "#" },
-    { name: "About me", url: "#hero" },
-    { name: "How it works", url: "#how-it-works" },
-    { name: "Contact us", url: "mailto:help4propertydeals@gmx.com" },
-  ];
-
-  return (
-    <div
-      className="footer-col col-one"
-      data-aos-delay="100"
-      data-aos="fade-right"
-      data-aos-duration="1000"
-    >
-      <h4>Sitemap</h4>
-      <ul className="footer-links site-map">
-        {sitemapLinks.map((link) => (
-          <li key={link.name}>
-            <a href={link.url}>{link.name}</a>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
@@ -127,6 +102,67 @@ const FooterBottom = () => {
       <p>
         <a href="/privacy-policy">Privacy Policy</a>
       </p>
+    </div>
+  );
+};
+
+const FooterLinks = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScrollTo = (hash, e) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      navigate(`/#${hash}`);
+    }
+
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
+
+  const links = [
+    { name: "Home", hash: "home" },
+    { name: "How it works", hash: "how-it-works" },
+    { name: "About me", hash: "about" },
+    { name: "FAQs", hash: "faqs" },
+    { name: "Contact us", hash: "form-section" },
+  ];
+
+  return (
+    <div
+      className="footer-col col-one"
+      data-aos-delay="100"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      <h4>Sitemap</h4>
+      <ul className="footer-links site-map">
+        {links.map((link) => (
+          <li key={link.name}>
+            {link.email ? (
+              <Nav.Link
+                href={`mailto:${link.email}`}
+                className="footer-nav-link"
+              >
+                {link.name}
+              </Nav.Link>
+            ) : (
+              <Nav.Link
+                href={`#${link.hash}`}
+                onClick={(e) => handleScrollTo(link.hash, e)}
+                className="footer-nav-link"
+              >
+                {link.name}
+              </Nav.Link>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

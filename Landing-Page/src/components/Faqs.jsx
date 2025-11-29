@@ -59,7 +59,7 @@ export default FaqComponent;
 
 const FaqWrapper = () => {
   return (
-    <div className="faq__wrapper" id="FAQs">
+    <div className="faq__wrapper" id="faqs">
       <Accordion />
     </div>
   );

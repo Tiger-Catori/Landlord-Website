@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import "./css/App.css";
 import NavbarComponent from "./components/Navbar";
 import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage"; // import error page
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage"; // import privacy policy page
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage"; // import terms and conditions page
 import "aos/dist/aos.css";
@@ -31,6 +32,7 @@ function App() {
             path="/terms-and-conditions"
             element={<TermsAndConditionsPage />}
           />
+          <Route path="/*" element={<ErrorPage />} />
           {/* Add more routes here if needed */}
         </Routes>
       </main>

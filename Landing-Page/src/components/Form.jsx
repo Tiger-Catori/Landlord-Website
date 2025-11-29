@@ -20,7 +20,7 @@ const FormSection = () => {
             className="container__image"
             data-aos="flip-left"
             data-aos-duration="1500"
-            data-aos-delay="1200"
+            data-aos-delay="500"
           >
             <img src="images/general/form-image.webp" alt="" />
           </div>
@@ -44,7 +44,7 @@ const Form = () => {
         "HJGGHxDB7ombFB3zD", // ← replace
       )
       .then(
-        (result) => {
+        () => {
           alert("Form submission successful!");
           formRef.current.reset();
         },
@@ -61,7 +61,7 @@ const Form = () => {
       id="form2__box"
       data-aos="flip-right"
       data-aos-duration="1500"
-      data-aos-delay="1200"
+      data-aos-delay="500"
     >
       <form ref={formRef} onSubmit={sendEmail} className="web__form">
         <FormHeading />

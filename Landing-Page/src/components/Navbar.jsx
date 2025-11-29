@@ -59,7 +59,7 @@ const NavbarSection = () => {
 // Logo Component
 const Logo = () => {
   return (
-    <Navbar.Brand href="#" className="logo__img-container">
+    <Navbar.Brand as={Link} to="/" className="logo__img-container">
       <img src="/images/logos/Logo2.webp" alt="Logo" className="logo__img" />
     </Navbar.Brand>
   );
@@ -125,7 +125,7 @@ const NavLinks = ({ isOpen }) => {
         as={Link}
         className="nav__link"
         to="/"
-        onClick={() => handleClick("FAQs")}
+        onClick={() => handleClick("faqs")}
       >
         <span>FAQs</span>
       </Nav.Link>
