@@ -67,6 +67,22 @@
 }
 
 /* Logo column – no extra side spacing */
+.footer__email {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer__email li {
+    list-style: none;
+}
+
+.footer__email li:hover {
+    text-decoration: underline;
+}
+
 .logo-footer {
     flex: 0 0 auto;
     /*margin: 0;

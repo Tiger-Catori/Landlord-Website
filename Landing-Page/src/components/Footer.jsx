@@ -29,7 +29,14 @@ const FooterLogo = () => {
   return (
     <div className="footer-col logo-footer">
       <img src="/images/logos/Logo-icon.webp" alt="Help4Landlords Logo" />
-      <p>Lorem ipsum dolor sit amet consectetur. Leo lectus petegs</p>
+      <p>Your Property, Our Priority</p>
+      <ul className="footer__email">
+        <li>
+          <a href="mailto:help4propertydeals@gmx.com">
+            help4propertydeals@gmx.com
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
@@ -56,7 +63,7 @@ const FooterLinks = () => {
   const links = [
     { name: "Home", hash: "home" },
     { name: "How it works", hash: "how-it-works" },
-    { name: "About me", hash: "about" },
+    { name: "About us", hash: "about" },
     { name: "FAQs", hash: "faqs" },
     { name: "Contact us", hash: "form-section" },
   ];

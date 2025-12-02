@@ -58,8 +58,19 @@ const NavbarSection = () => {
 
 // Logo Component
 const Logo = () => {
+  const handleClick = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 0);
+  };
+
   return (
-    <Navbar.Brand as={Link} to="/" className="logo__img-container">
+    <Navbar.Brand
+      as={Link}
+      to="/"
+      className="logo__img-container"
+      onClick={handleClick}
+    >
       <img src="/images/logos/Logo2.webp" alt="Logo" className="logo__img" />
     </Navbar.Brand>
   );
