@@ -169,11 +169,15 @@ const FooterBottom = () => {
       </p>
 
       <p>
-        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+        <a target="_blank" href="/terms-and-conditions">
+          Terms &amp; Conditions
+        </a>
       </p>
 
       <p>
-        <a href="/privacy-policy">Privacy Policy</a>
+        <a target="_blank" href="/privacy-policy">
+          Privacy Policy
+        </a>
       </p>
     </div>
   );

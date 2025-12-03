@@ -130,7 +130,9 @@ const AgreementCheckbox = () => (
     <label htmlFor="subscribe" className="label">
       I agree to have my information stored&nbsp;
       <span>
-        <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link target="_blank" to="/privacy-policy">
+          Privacy Policy
+        </Link>
       </span>
     </label>
   </div>
