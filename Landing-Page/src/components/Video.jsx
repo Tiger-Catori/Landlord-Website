@@ -20,7 +20,7 @@ const Video = () => {
   return (
     <iframe
       className="iframe"
-      src="https://player.vimeo.com/video/887302572?byline=0&portrait=0&title=0&autoplay=0"
+      src="https://www.youtube.com/embed/xeXV1KoX034?autoplay=0&rel=0&modestbranding=1&loop=1&playlist=xeXV1KoX034"
       title="Feature Video"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -30,6 +30,36 @@ const Video = () => {
     ></iframe>
   );
 };
+
+// const Video = () => {
+//   return (
+//     <iframe
+//       className="iframe"
+//       src="https://www.youtube.com/embed/K4TOrB7at0Y?si=xLLsefKE2qG7L_mn?byline=0&portrait=0&title=0&autoplay=0"
+//       title="Feature Video"
+//       frameBorder="0"
+//       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+//       data-aos="flip-up"
+//       data-aos-duration="1500"
+//       data-aos-delay="500"
+//     ></iframe>
+//   );
+// };
+
+// const Video = () => {
+//   return (
+//     <iframe
+//       className="iframe"
+//       src="https://player.vimeo.com/video/887302572?byline=0&portrait=0&title=0&autoplay=0"
+//       title="Feature Video"
+//       frameBorder="0"
+//       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+//       data-aos="flip-up"
+//       data-aos-duration="1500"
+//       data-aos-delay="500"
+//     ></iframe>
+//   );
+// };
 
 const VideoText = () => {
   return (
