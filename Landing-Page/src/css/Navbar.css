@@ -111,7 +111,7 @@
 .menu {
     display: none; /* Hidden on desktop */
     position: absolute;
-    right: 3.2rem;
+    right: 0rem;
     flex-direction: column;
     justify-content: space-around;
     width: 4rem;
