@@ -20,6 +20,10 @@
     /* letter-spacing: -0.5em; */
 }
 
+.not__found h1 .digit:nth-child(2) {
+    color: var(--clr-accent5);
+}
+
 /* Special styling for the '0' to make it a circle with background image */
 .not__found h1 .zero-circle {
     font-size: calc(9rem + 2vw);

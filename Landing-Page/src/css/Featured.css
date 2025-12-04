@@ -43,7 +43,8 @@
 
 /* Constrain and center text content inside full-width banner */
 .featured__head > * {
-    width: 70%;
+    max-width: 130rem;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }

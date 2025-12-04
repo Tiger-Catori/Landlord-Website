@@ -56,7 +56,7 @@ const AboutText = () => {
         About Help4Landlords
       </h2>
       <p
-        className="=about__text__description"
+        className="about__text__description"
         id="about__p"
         data-aos="fade-right"
         data-aos-duration="1500"
@@ -69,7 +69,7 @@ const AboutText = () => {
         full maintenance management – all at no additional cost to landlords.
       </p>
       <p
-        className="=about__text__description"
+        className="about__text__description"
         id="about__p"
         data-aos="fade-left"
         data-aos-duration="1500"

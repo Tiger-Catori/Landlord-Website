@@ -93,7 +93,8 @@
 
 /* Constrain and center text content inside full-width banner */
 .about__text > * {
-    width: 70%;
+    max-width: 130rem;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 }
