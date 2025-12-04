@@ -5,31 +5,34 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* ← KEY: makes children same height */
     gap: 6.4rem;
-    max-width: 130rem; /* NEW */
+    max-width: 130rem;
     width: 100%;
-    margin: 4rem auto; /* Center the container */
+    margin: 4rem auto;
 }
 
 /* 50/50 split */
 .form__container > * {
-    flex: 1 1 50%; /* 50% width but responsive */
+    flex: 1 1 50%;
     max-width: 50%;
 }
 
-/* Image container */
+/* Image container — now matches form height & crops */
 .container__image {
     width: 100%;
-    max-width: 100%; /* so it follows the 50% rule */
+    max-width: 100%;
+    border-radius: 16px; /* match form border-radius */
+    overflow: hidden; /* ← essential for object-fit to crop cleanly */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+
 .container__image img {
     width: 100%;
-    height: auto;
-    border-radius: 25%;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    height: 100%; /* ← fill container height */
+    object-fit: cover; /* ← zoom and crop */
+    object-position: center; /* ← focus on center */
+    display: block;
 }
 
 /* =========================================================
@@ -39,13 +42,13 @@
     width: 100%;
     padding: 3.2rem 4.8rem;
     background-color: #fff;
-    /* border: 3px solid var(--clr-accent2); */
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Rest of your styles remain unchanged... */
 /* =========================================================
    FORM BASE STYLES
    ========================================================= */
@@ -190,16 +193,14 @@ textarea {
 /* =========================================================
    HOW IT WORKS
    ========================================================= */
-
-/* Center the entire HOW IT WORKS section inside the form */
 .how-it-works {
     display: flex;
     flex-direction: column;
-    align-items: center; /* NEW: center content horizontally */
+    align-items: center;
     justify-content: center;
     margin-top: 1.6rem;
     text-align: center;
-    width: 100%; /* Ensures clean alignment */
+    width: 100%;
 }
 
 .how-it-works h1 {
@@ -209,7 +210,6 @@ textarea {
     text-transform: capitalize;
 }
 
-/* Steps wrapper centered */
 .steps {
     display: flex;
     justify-content: center;
@@ -217,13 +217,12 @@ textarea {
     width: 100%;
 }
 
-/* Fix image centering */
 .steps img {
     max-width: 40rem;
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* FIXED: centers the image */
+    margin: 0 auto;
 }
 
 /* =========================================================
@@ -232,10 +231,19 @@ textarea {
 @media (max-width: 1200px) {
     .form__container {
         flex-direction: column;
+        align-items: center; /* stack vertically */
         max-width: 90%;
+        gap: 3rem;
     }
 
     .form__container > * {
         max-width: 100%;
+        width: 100%;
+    }
+
+    /* On mobile, image can be auto height */
+    .container__image img {
+        height: auto;
+        object-fit: contain; /* or cover, depending on preference */
     }
 }

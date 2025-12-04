@@ -52,7 +52,7 @@ const HeroImage = () => {
       <div className="container__img">
         <img
           className="hero__img"
-          src="images/general/form-image.webp"
+          src="images/general/form-image3.webp"
           alt="Terraced Houses (Hero Image)"
         />
       </div>
