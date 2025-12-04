@@ -120,7 +120,7 @@ const NavLinks = ({ isOpen }) => {
         as={Link}
         className="nav__link"
         to="/"
-        onClick={() => handleClick("how-it-works")}
+        onClick={() => handleClick("banner")}
       >
         <span>How it works</span>
       </Nav.Link>

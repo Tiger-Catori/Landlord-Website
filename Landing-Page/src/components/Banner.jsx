@@ -20,7 +20,7 @@ const Banner = () => {
 
   return (
     <section className="section__banner">
-      <div className="banner__track">
+      <div className="banner__track" id="banner">
         {/* FIRST COPY */}
         <div className="banner__items">
           {bannerItems.map((item) => (
