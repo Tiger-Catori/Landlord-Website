@@ -177,7 +177,7 @@
 @media (min-width: 500px) and (max-width: 900px) {
     .hero__image {
         min-width: 500px;
-        max-width: 500px; /* optional: cap it */
+        max-width: 600px; /* optional: cap it */
     }
 
     .hero__img {
