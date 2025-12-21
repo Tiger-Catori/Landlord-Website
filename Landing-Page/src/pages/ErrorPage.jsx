@@ -1,5 +1,5 @@
 import NavbarComponment from "../components/Navbar";
-import NotFound from "../components/NotFound";
+import NotFound from "../components/NotFound.jsx";
 import FooterComponent from "../components/Footer";
 import "../css/ErrorPage.css";
 

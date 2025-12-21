@@ -22,7 +22,7 @@ const FormSection = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <img src="images/general/form-image3.webp" alt="" />
+            <img src="images/general/hero-bath3.webp" alt="" />
           </div>
         </div>
       </section>

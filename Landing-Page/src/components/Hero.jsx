@@ -1,6 +1,7 @@
 // Hero.jsx
 import "../css/Hero.css";
 import "../css/Button.css";
+import ButtonLink from "./ButtonLink";
 
 const HeroComponent = () => {
   return <Hero />;
@@ -28,15 +29,15 @@ const HeroText = () => {
       data-aos-duration="1500"
     >
       <h2 className="heading hero__head">
-        Manage <span>Less,</span> Earn <span>More</span>
+        Passive <span>Income,</span> The <span>Easy</span> Way
       </h2>
       <p className="hero__p">
         Looking for a passive, stress-free solution for your property
         investments?
       </p>
-      <div className="hero__btn hero__btn-link">
-        <a href="mailto:help4propertydeals@gmx.com">Speak to our Team</a>
-      </div>
+      <ButtonLink href="mailto:info@help4landlords.org">
+        Speak to our Team
+      </ButtonLink>
     </div>
   );
 };

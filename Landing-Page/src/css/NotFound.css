@@ -52,6 +52,7 @@
 .not__found p {
     font-size: calc(1.4rem + 0.6vw);
     /*font-weight: var(--fw-semibold);*/
+    margin-bottom: 2.2rem;
 }
 
 .path {

@@ -32,9 +32,7 @@ const FooterLogo = () => {
       <p>Your Property, Our Priority</p>
       <ul className="footer__email">
         <li>
-          <a href="mailto:help4propertydeals@gmx.com">
-            help4propertydeals@gmx.com
-          </a>
+          <a href="mailto:info@help4landlords.org">info@help4landlords.org</a>
         </li>
       </ul>
     </div>
