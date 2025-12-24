@@ -36,7 +36,7 @@ const HeroText = () => {
         investments?
       </p>
       <ButtonLink href="mailto:info@help4landlords.org">
-        Speak to our Team
+        Contact our Team
       </ButtonLink>
     </div>
   );

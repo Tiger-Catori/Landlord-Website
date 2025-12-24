@@ -75,6 +75,10 @@
     aspect-ratio: 16/9;
 }
 
+.banner__img:nth-child(6) {
+    margin-right: -3rem;
+}
+
 .banner__img:hover {
     filter: grayscale(0%);
 }

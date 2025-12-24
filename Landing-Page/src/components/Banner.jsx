@@ -16,6 +16,11 @@ const Banner = () => {
       img: "nrla2-logo.webp",
       alt: "National Residential Landlords Association",
     },
+    {
+      id: 6,
+      img: "tds-logo.webp",
+      alt: "Tenancy Deposit Scheme",
+    },
   ];
 
   return (
