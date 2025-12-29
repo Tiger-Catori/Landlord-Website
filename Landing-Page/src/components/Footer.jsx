@@ -34,6 +34,9 @@ const FooterLogo = () => {
         <li>
           <a href="mailto:info@help4landlords.org">info@help4landlords.org</a>
         </li>
+        <li>
+          <a href="tel:+44 (0) 7344 191086">+44 (0) 7344 191086</a>
+        </li>
       </ul>
     </div>
   );
