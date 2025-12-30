@@ -22,7 +22,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("/images/general/background.webp");
+    background-image: url("/images/general/House-Background.webp");
+    /*background-image: url("/images/general/background.webp");*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +35,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.85);
+    /*background: rgba(15, 23, 42, 0.85);*/
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -64,7 +66,7 @@
 
 /* Hero heading (responsive) */
 .hero__head {
-    font-size: calc(2.2rem + 2vw); /* responsive font size */
+    font-size: calc(3.2rem + 2vw); /* responsive font size */
     font-weight: var(--fw-semibold);
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -77,7 +79,7 @@
 
 /* Hero paragraph (responsive) */
 .hero__p {
-    font-size: calc(1rem + 0.6vw); /* responsive font size */
+    font-size: calc(1.3rem + 0.8vw); /* responsive font size */
     line-height: 1.7;
     margin-bottom: 2.5rem;
     color: var(--clr-accent4);
@@ -114,12 +116,26 @@
     border-bottom-right-radius: 0;*/
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 0 solid rgba(255, 255, 255, 0.1);
+    /*display: none;*/
+    visibility: hidden;
 }
+
+/* RATIO of Text to image in hero container */
+
+.hero__text {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+/*.hero__image {
+    flex: 0 0 30%;
+    max-width: 30%;
+}*/
 
 /* ================================
    Responsive Layout - Tablets & Down
    ================================ */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     /* Stack elements vertically (TEXT first, IMAGE second) */
     .hero__container {
         flex-direction: column !important;
@@ -144,6 +160,7 @@
         justify-content: center;
         max-width: 500px;
         width: 100%;
+        display: none;
     }
 
     .hero__img {

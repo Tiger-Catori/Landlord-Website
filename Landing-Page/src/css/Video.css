@@ -83,3 +83,28 @@
         margin-top: 0;
     }
 }
+
+/* WRAPPER KEEPS 16:9 ASPECT RATIO */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 110rem; /* same max width you intended */
+    /*max-height: 61.8rem;*/
+    padding-bottom: 32.5%; /* 16:9 aspect ratio (9 ÷ 16 = 0.5625) */ /*
+    height: 0; /* important for intrinsic ratio trick */
+    overflow: hidden; /* ensures nothing overflows */
+    margin-bottom: 0; /* remove extra space below */
+}
+
+/* MAKE IFRAME & THUMB FILL THE WRAPPER */
+.video-wrapper iframe,
+.video-wrapper .video-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures image/video cover the whole box */
+    display: block; /* removes default inline spacing */
+    border: 0; /* removes iframe border spacing */
+}
