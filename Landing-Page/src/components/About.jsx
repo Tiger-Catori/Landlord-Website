@@ -1,20 +1,38 @@
 import React from "react";
 import "../css/About.css";
 
+// const teamCardData = [
+//   {
+//     id: 1,
+//     images: [{ id: 1, img: "team-2.webp", alt: "team-2" }],
+//     text: { text_name: "Michael Adeleye", text_job: "Founder & CEO" },
+//   },
+//   {
+//     id: 2,
+//     images: [{ id: 1, img: "team-3.webp", alt: "team-3" }],
+//     text: { text_name: "Sera Adeleye", text_job: "Co-Founder" },
+//   },
+//   {
+//     id: 3,
+//     images: [{ id: 1, img: "team-6.webp", alt: "team-6" }],
+//     text: { text_name: "Blest Adeleye", text_job: "Manager" },
+//   },
+// ];
+//
 const teamCardData = [
   {
     id: 1,
-    images: [{ id: 1, img: "team-2.webp", alt: "team-2" }],
+    images: [{ id: 1, img: "team-1.webp", alt: "Michael Adeleye Pic" }],
     text: { text_name: "Michael Adeleye", text_job: "Founder & CEO" },
   },
   {
     id: 2,
-    images: [{ id: 1, img: "team-3.webp", alt: "team-3" }],
+    images: [{ id: 1, img: "team-5.webp", alt: "Sera Adeleye Pic" }],
     text: { text_name: "Sera Adeleye", text_job: "Co-Founder" },
   },
   {
     id: 3,
-    images: [{ id: 1, img: "team-6.webp", alt: "team-6" }],
+    images: [{ id: 1, img: "team-4.webp", alt: "Blest Adeleye Pic" }],
     text: { text_name: "Blest Adeleye", text_job: "Manager" },
   },
 ];

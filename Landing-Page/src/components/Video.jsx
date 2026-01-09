@@ -31,13 +31,13 @@ const Video = () => {
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
           data-aos="flip-up"
-          data-aos-duration="1500"
-          data-aos-delay="500"
+          data-aos-duration="500"
+          data-aos-delay="0"
         ></iframe>
       ) : (
         <img
           className="video-thumb"
-          src="/images/logos/Thumbnail.png"
+          src="/images/logos/Thumbnail2.png"
           alt="Play video"
         />
       )}
