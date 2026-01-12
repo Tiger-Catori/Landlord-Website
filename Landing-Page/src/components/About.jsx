@@ -22,7 +22,7 @@ import "../css/About.css";
 const teamCardData = [
   {
     id: 1,
-    images: [{ id: 1, img: "team-1.webp", alt: "Michael Adeleye Pic" }],
+    images: [{ id: 1, img: "team-7.webp", alt: "Michael Adeleye Pic" }],
     text: { text_name: "Michael Adeleye", text_job: "Founder & CEO" },
   },
   {
@@ -32,7 +32,7 @@ const teamCardData = [
   },
   {
     id: 3,
-    images: [{ id: 1, img: "team-4.webp", alt: "Blest Adeleye Pic" }],
+    images: [{ id: 1, img: "team-8.webp", alt: "Blest Adeleye Pic" }],
     text: { text_name: "Blest Adeleye", text_job: "Manager" },
   },
 ];
