@@ -22,10 +22,10 @@
     content: "";
     position: absolute;
     inset: 0;
-    /*background-image: url("/images/general/House-Background.webp");*/
+    background-image: url("/images/general/House-Background.webp");
     /*background-image: url("/images/general/background.webp");*/
-    background-image: url("/images/hmo-pics/Frontage.webp");
-    background-image: url("/images/hmo-pics/Bedroom.webp");
+    /*background-image: url("/images/hmo-pics/Frontage.webp");
+    background-image: url("/images/hmo-pics/Bedroom.webp");*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
