@@ -35,9 +35,10 @@ const HeroText = () => {
         Looking for a passive, stress-free solution for your property
         investments?
       </p>
-      <ButtonLink href="mailto:info@help4landlords.org">
+      <ButtonLink href="tel:+1234567890">Contact our Team</ButtonLink>
+      {/* <ButtonLink href="mailto:info@help4landlords.org">
         Contact our Team
-      </ButtonLink>
+      </ButtonLink>*/}
     </div>
   );
 };
