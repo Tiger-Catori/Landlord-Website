@@ -40,6 +40,7 @@ const teamCardData = [
 const AboutComponent = () => {
   return <AboutSection />;
 };
+
 export default AboutComponent;
 
 const AboutSection = () => {
